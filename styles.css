@@ -1,0 +1,63 @@
+/* ---------- */
+/*    FONTS   */
+/* ---------- */
+
+
+/* ---------- */
+/*   COLORS   */
+/* ---------- */
+:root {
+    --grey: #383838;
+    --white: #FFFFFF;
+    --gold: #DCCAA9;
+    --yellow: #FFD074;
+    --pink: #F6D2DE;
+    --red: #B05C52;
+    --green: #7CAD7C;
+}
+
+/* ---------- */
+/*    MAIN    */
+/* ---------- */
+body, a {
+    background: var(--grey);
+    color: var(--white);
+}
+
+/* ---------- */
+/* NAVIGATION */
+/* ---------- */
+header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+nav {
+    /* make logo and nav side-by-side */
+    /* display: inline-block; */
+}
+
+nav > ul {
+    list-style: none;
+    /* padding: 0; */
+}
+
+nav > ul > li {
+    /* make nav list side-by-side*/
+    display: inline;
+    padding-right: 10px;
+}
+
+nav > ul > li > a {
+    color: var(--gold);
+    text-transform: uppercase;
+    text-decoration: underline wavy var(--gold);
+    text-underline-offset: .5em;
+    
+}
+
+nav > ul > li > a:hover {
+    color: var(--green);
+    text-decoration: underline wavy var(--green);    
+}
