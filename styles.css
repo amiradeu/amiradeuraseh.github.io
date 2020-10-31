@@ -1,9 +1,8 @@
 /* ---------- */
 /*    FONTS   */
 /* ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 /* ---------- */
 /*   COLORS   */
@@ -22,11 +21,10 @@
 /*    MAIN    */
 /* ---------- */
 body {
-    /* background: var(--grey); */
-    /* color: var(--white); */
-    color: var(--grey);
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
+    background: var(--grey);
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
 }
 
 /* ---------- */
@@ -50,14 +48,15 @@ nav > ul {
 
 nav > ul > li {
     /* make nav list side-by-side*/
-    display: inline;
-    padding-right: 10px;
+    /* display: inline; */
+    /* padding-right: 10px; */
 }
 
 nav > ul > li > a {
-    font-family: 'Julius Sans One', sans-serif;
-    color: var(--gold);
-    text-transform: uppercase;
+    color: var(--pink);
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 48px;
     text-decoration: none;
     /* text-decoration: underline wavy var(--gold); */
     /* text-underline-offset: .5em; */
@@ -65,7 +64,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a::before {
-    content: "☻ ";
+    content: "☺︎ ";
     color: var(--green);
     /* text-decoration: underline wavy var(--green);     */
     /* animation: 3s slidein; */
@@ -73,15 +72,31 @@ nav > ul > li > a::before {
 
 nav > ul > li > a:hover {
     text-decoration: underline wavy var(--green);    
-    /* animation: 3s slidein; */
+}
+
+/* ---------- */
+/*   BANNER   */
+/* ---------- */
+#banner > h1{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 100px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--pink);
 }
 
 /* ---------- */
 /*   SECTION  */
 /* ---------- */
-section > h2 {
-    font-family: 'Archivo Narrow', sans-serif;
+article > h2 {
+    font-family: 'Lora', serif;
     font-size: 24px;
-    letter-spacing: 3px;
+    font-weight : 400;
+    letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+article > p {
+    letter-spacing: 1px;
 }
