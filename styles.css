@@ -25,6 +25,7 @@ body {
     color: var(--white);
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
+    margin: 0;
 }
 
 /* ---------- */
@@ -34,41 +35,53 @@ header {
     height: 100vh;
     width: 100%;
     background: var(--white);
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    color: var(--grey);
 }
 
-nav {
-    /* make logo and nav side-by-side */
-    /* display: inline-block; */
+nav {    
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
 }
 
 nav > ul {
+    align-self: center;
+    justify-self: center;
     list-style: none;
-    /* padding: 0; */
+    padding: 0;
 }
 
 nav > ul > li {
-    text-align: left;
+    text-align: center;
+    padding-bottom: 1vh;
 }
 
 nav > ul > li > a {
     color: var(--pink);
     font-family: 'Lora', serif;
     font-style: italic;
-    font-size: 48px;
+    font-size: 80px;
     text-decoration: none;
 }
 
 nav > ul > li > a::before {
-    content: "☺︎ ";
-    color: var(--green);
+    /* content: "☺︎ "; */
+    /* color: var(--green); */
 }
 
 nav > ul > li > a:hover {
-    text-decoration: underline wavy var(--green);    
+    text-decoration: underline var(--green);
+}
+
+#close {
+    justify-self: end;
+    font-size: 48px;
 }
 
 /* ---------- */
