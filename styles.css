@@ -31,8 +31,12 @@ body {
 /* NAVIGATION */
 /* ---------- */
 header {
+    height: 100vh;
+    width: 100%;
+    background: var(--white);
     display: flex;
     text-align: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -47,9 +51,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    /* make nav list side-by-side*/
-    /* display: inline; */
-    /* padding-right: 10px; */
+    text-align: left;
 }
 
 nav > ul > li > a {
@@ -58,16 +60,11 @@ nav > ul > li > a {
     font-style: italic;
     font-size: 48px;
     text-decoration: none;
-    /* text-decoration: underline wavy var(--gold); */
-    /* text-underline-offset: .5em; */
-    
 }
 
 nav > ul > li > a::before {
     content: "☺︎ ";
     color: var(--green);
-    /* text-decoration: underline wavy var(--green);     */
-    /* animation: 3s slidein; */
 }
 
 nav > ul > li > a:hover {
