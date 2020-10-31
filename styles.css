@@ -23,8 +23,8 @@
 body {
     background: var(--grey);
     color: var(--white);
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -64,9 +64,9 @@ nav > ul > li {
 
 nav > ul > li > a {
     color: var(--pink);
-    font-family: 'Lora', serif;
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
-    font-size: 80px;
+    font-size: 5rem;
     text-decoration: none;
 }
 
@@ -88,7 +88,7 @@ nav > ul > li > a:hover {
 /*   BANNER   */
 /* ---------- */
 #banner > h1{
-    font-family: 'Lora', serif;
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 100px;
     font-weight: 400;
@@ -100,7 +100,7 @@ nav > ul > li > a:hover {
 /*   SECTION  */
 /* ---------- */
 article > h2 {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 24px;
     font-weight : 400;
     letter-spacing: 1px;
