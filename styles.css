@@ -1,7 +1,9 @@
 /* ---------- */
 /*    FONTS   */
 /* ---------- */
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 /* ---------- */
 /*   COLORS   */
@@ -19,9 +21,12 @@
 /* ---------- */
 /*    MAIN    */
 /* ---------- */
-body, a {
-    background: var(--grey);
-    color: var(--white);
+body {
+    /* background: var(--grey); */
+    /* color: var(--white); */
+    color: var(--grey);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
 }
 
 /* ---------- */
@@ -50,14 +55,33 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
+    font-family: 'Julius Sans One', sans-serif;
     color: var(--gold);
     text-transform: uppercase;
-    text-decoration: underline wavy var(--gold);
-    text-underline-offset: .5em;
+    text-decoration: none;
+    /* text-decoration: underline wavy var(--gold); */
+    /* text-underline-offset: .5em; */
     
 }
 
-nav > ul > li > a:hover {
+nav > ul > li > a::before {
+    content: "☻ ";
     color: var(--green);
+    /* text-decoration: underline wavy var(--green);     */
+    /* animation: 3s slidein; */
+}
+
+nav > ul > li > a:hover {
     text-decoration: underline wavy var(--green);    
+    /* animation: 3s slidein; */
+}
+
+/* ---------- */
+/*   SECTION  */
+/* ---------- */
+section > h2 {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
