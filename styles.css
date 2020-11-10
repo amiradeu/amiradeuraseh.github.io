@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+
 /* ---------- */
 /*   COLORS   */
 /* ---------- */
@@ -16,6 +17,14 @@
     --red: #B05C52;
     --green: #7CAD7C;
 }
+
+/* reset format on all elements */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 
 /* ---------- */
 /*    MAIN    */
@@ -32,94 +41,89 @@ ul {
     list-style: none;
 }
 
+
 /* ---------- */
 /* NAVIGATION */
 /* ---------- */
-header {
-    height: 100vh;
-    width: 100%;
+nav {
+    /* background: var(--grey);
+    color: var(--gold); */
+}
+
+.nav-overlay {
     background: var(--grey);
     color: var(--gold);
-}
-
-nav {    
-    padding: 15px 30px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 10% auto 10%;
-    height: 100%;
+    grid-template-rows: 15% auto 15%;
+    grid-template-areas: 
+    "close links links"
+    "name links links"
+    "logo socials socials";
+    justify-items: center;
+    align-items: center;
 }
 
-/* 1st column - logo */
-img {
-    max-width: 100%;
-    height:auto;
-}
-
-/* 2nd column - nav list */
-nav > ul {
-    /* align - vertical */
-    align-self: center;
-    justify-self: center;
-    padding: 0;
-}
-
-nav > ul > li {
-    text-align: left;
-    padding-bottom: 1vh;
-}
-
-nav > ul > li > a {
-    color: var(--pink);
-    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
-    font-style: italic;
-    font-size: 5rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav > ul > li > a::before {
-    content: "☺︎ ";
-    color: var(--green);
-    font-size: 20px;
-}
-
-nav > ul > li > a:hover {
-    text-decoration: underline var(--green);
-}
-
-/* 3rd column - hamburger nav */
-#close{
-    justify-self: end;
-}
-
-#hamburger{
+.nav-close {
+    grid-area: close;
     cursor: pointer;
 }
 
-#bar1, #bar2, #bar3 {
-    
-    width: 35px;
-    height: 5px;
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
     background-color: var(--gold);
     margin: 6px 0;
 }
 
-/* Rotate first bar */
-.change #bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+.nav-name {
+    grid-area: name;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-/* Fade out the second bar */
-.change #bar2 {
-    opacity: 0;
+.nav-logo {
+    grid-area: logo;
+    max-width: 60%;
+    height: auto;
 }
 
-/* Rotate last bar */
-.change #bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+.nav-links {
+    grid-area: links;
+    justify-self: start;
+    padding-left: 30px;
 }
+
+.nav-links li a {
+    color: var(--pink);
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 7vw;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline var(--green);
+}
+
+.nav-socials {
+    grid-area: socials;
+    display: flex;
+    justify-self: flex-end;
+    padding-right: 30px;
+}
+
+.nav-socials li a {
+    color: var(--green);
+    font-size: 2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 30px;
+}
+
 
 /* ---------- */
 /*   BANNER   */
@@ -132,6 +136,7 @@ nav > ul > li > a:hover {
     text-transform: capitalize;
     color: var(--pink);
 }
+
 
 /* ---------- */
 /*   SECTION  */
