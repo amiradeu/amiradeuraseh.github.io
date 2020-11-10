@@ -123,12 +123,15 @@ ul {
 }
 
 .nav-socials li a {
-    color: var(--green);
+    color: var(--gold);
     font-size: 2vw;
     text-transform: uppercase;
     margin-right: 30px;
 }
 
+.nav-socials a:hover {
+    color: var(--green);
+}
 
 /* ---------- */
 /*   BANNER   */
