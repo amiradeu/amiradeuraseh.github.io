@@ -146,6 +146,7 @@ ul {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 768px){
     .nav-overlay {
+        grid-template-rows: 50px auto 30%;
         grid-template-areas: 
             "logo name burger"
             "links links links"
