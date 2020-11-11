@@ -72,7 +72,7 @@ ul {
     height: 2px;
     background-color: var(--gold);
     margin: 6px 0;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-name {
@@ -184,17 +184,12 @@ ul {
 /* HAMBURGER TOGGLE ACTIVE  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 .nav-active .bar1 {
-    transform: rotate(-45deg) ;
+    transform: rotate(-20deg) translate(0px, 4px);
 }
 
 .nav-active .bar2 {
-    transform: rotate(-45deg) ;
+    transform: rotate(20deg) translate(0px, -4px);
 }
-
-.nav-active .bar3 {
-    transform: rotate(-45deg) ;
-}
-
 
 /* ---------- */
 /*   BANNER   */
