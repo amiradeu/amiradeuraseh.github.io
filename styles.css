@@ -18,7 +18,10 @@
     --green: #7CAD7C;
 }
 
-/* reset format on all elements */
+
+/* ---------- */
+/*    MAIN    */
+/* ---------- */
 * {
     margin: 0px;
     padding: 0px;
@@ -29,9 +32,6 @@ a {
     text-decoration: none;
 }
 
-/* ---------- */
-/*    MAIN    */
-/* ---------- */
 body {
     background: var(--white);
     color: var(--grey);
@@ -44,22 +44,15 @@ ul {
     list-style: none;
 }
 
-/* ------------------ */
-/*      NAVIGATION    */
-/* ------------------ */
-
-
 
 /* ------------------ */
 /* NAVIGATION OVERLAY */
 /* ------------------ */
 .nav-overlay {
-    background: var(--red);
     color: var(--gold);
-    height: 100vh;
     display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 15% auto 15%;
+    grid-template-rows: 50px auto 15%;
     grid-template-areas: 
     "burger links links"
     "name links links"
@@ -136,6 +129,8 @@ ul {
     color: var(--green);
 }
 
+/*  NAVIGATION MOBILE VIEW  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 768px){
     .nav-overlay {
         grid-template-areas: 
@@ -150,20 +145,31 @@ ul {
 
     .nav-links, .nav-socials {
         justify-self: center;
+        display: none;
     }
-
-    /* .nav-name, .nav-logo, .nav-burger {
-        border-bottom: 3px solid var(--red);
-    } */
 }
 
+/* NAVIGATION TOGGLE ACTIVE */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 .nav-active {
-    /* background-color: var(--grey) !important; */
-    /* overflow: hidden; */
-    display: none;
-    /* transform: translateX(100%); */
+    height: 100vh;
+    background-color: var(--red);
 }
 
+.nav-active .nav-name a {
+    color: var(--green);
+}
+
+.nav-active .nav-links {
+    display: block;
+}
+
+.nav-active .nav-socials {
+    display: flex;
+}
+
+/* HAMBURGER TOGGLE ACTIVE  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 .toggle .bar1 {
     transform: rotate(-45deg) ;
 }
@@ -175,6 +181,8 @@ ul {
 .toggle .bar3 {
     transform: rotate(-45deg) ;
 }
+
+
 /* ---------- */
 /*   BANNER   */
 /* ---------- */
