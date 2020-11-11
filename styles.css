@@ -67,7 +67,7 @@ ul {
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2 {
     width: 30px;
     height: 2px;
     background-color: var(--gold);
@@ -165,7 +165,21 @@ ul {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 .nav-active {
     height: 100vh;
-    background-color: var(--red);
+    background: linear-gradient(to right, var(--grey) 50%, var(--white) 50%);
+    background-size: 200%;
+    animation: navFade 2.5s cubic-bezier(0.3,0,0,1);
+}
+
+@keyframes navFade {
+    from {
+        background-position:100%;
+        opacity: 0;
+    }
+    
+    to {
+        background-position:0%;
+        opacity: 1;
+    }
 }
 
 .nav-active .nav-name a {
@@ -179,7 +193,6 @@ ul {
 .nav-active .nav-socials {
     display: flex;
 }
-
 
 /* HAMBURGER TOGGLE ACTIVE  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
