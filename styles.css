@@ -170,15 +170,15 @@ ul {
 
 /* HAMBURGER TOGGLE ACTIVE  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
-.toggle .bar1 {
+.nav-active .bar1 {
     transform: rotate(-45deg) ;
 }
 
-.toggle .bar2 {
+.nav-active .bar2 {
     transform: rotate(-45deg) ;
 }
 
-.toggle .bar3 {
+.nav-active .bar3 {
     transform: rotate(-45deg) ;
 }
 
