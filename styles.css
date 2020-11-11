@@ -115,7 +115,6 @@ ul {
     grid-area: socials;
     display: flex;
     justify-self: flex-end;
-    padding-right: 30px;
 }
 
 .nav-socials li a {
@@ -129,8 +128,22 @@ ul {
     color: var(--green);
 }
 
-/*  NAVIGATION MOBILE VIEW  */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* INITIAL VIEW IS HIDDEN */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+.nav-links, .nav-socials {
+    display: none;
+}
+
+/* NAVIGATION DESKTOP VIEW */
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 768px){
+    .nav-overlay {
+        height: 100vh;
+    }
+}
+
+/*  NAVIGATION MOBILE & TABLET VIEW  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 768px){
     .nav-overlay {
         grid-template-areas: 
@@ -145,7 +158,6 @@ ul {
 
     .nav-links, .nav-socials {
         justify-self: center;
-        display: none;
     }
 }
 
@@ -167,6 +179,7 @@ ul {
 .nav-active .nav-socials {
     display: flex;
 }
+
 
 /* HAMBURGER TOGGLE ACTIVE  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
