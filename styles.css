@@ -10,7 +10,7 @@
 /* ---------- */
 :root {
     --grey: #383838;
-    --white: #FFFFFF;
+    --white: #F3F5F5;
     --gold: #DCCAA9;
     --yellow: #FFD074;
     --pink: #F6D2DE;
@@ -288,23 +288,28 @@ ul {
     transform: rotate(20deg) translate(0px, -4px);
 }
 
+
 /* ---------- */
 /*   BANNER   */
 /* ---------- */
-#banner > h1{
+/* #banner > h1{
     font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 100px;
     font-weight: 400;
     text-transform: capitalize;
     color: var(--pink);
-}
+} */
 
 
 /* ---------- */
 /*   SECTION  */
 /* ---------- */
-article > h2 {
+section {
+    height: 30vh;
+}
+
+section > h2 {
     font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 24px;
     font-weight : 400;
@@ -312,6 +317,20 @@ article > h2 {
     text-transform: uppercase;
 }
 
-article > p {
+section > p {
     letter-spacing: 1px;
+}
+
+
+/* ---------- */
+/*   FOOTER  */
+/* ---------- */
+footer {
+    height: 20vh;
+    background-color: var(--grey);
+}
+
+
+section, footer {
+    padding: 50px;
 }
