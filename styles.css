@@ -51,7 +51,7 @@ ul {
 .nav-overlay {
     color: var(--gold);
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 60px auto 10%;
     grid-template-rows: 50px auto 15%;
     grid-template-areas: 
     "navheader navmain navmain"
@@ -118,6 +118,8 @@ ul {
 
 .nav-logo {
     grid-area: logo;
+    align-self: end;
+    padding-bottom: 20px;
 }
 
 .nav-logo > img {
@@ -200,7 +202,9 @@ ul {
     }
 
     .nav-logo {
+        align-self: center;
         justify-self: start;
+        padding-bottom: 0px;
         padding-left: 10px;
     }
 
