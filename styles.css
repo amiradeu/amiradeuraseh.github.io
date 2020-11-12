@@ -54,12 +54,38 @@ ul {
     grid-template-columns: 10% auto 10%;
     grid-template-rows: 50px auto 15%;
     grid-template-areas: 
-    "burger links links"
-    "name links links"
-    "logo socials socials";
+    "navheader navmain navmain"
+    "navheader navmain navmain"
+    "navheader navmain navmain";
     justify-items: center;
     align-items: center;
-    row-gap: 2px;
+}
+
+.nav-header {
+    height: 100%;
+    width: 100%;
+    grid-area: navheader;
+    display: grid;
+    grid-template-rows: 50px auto 15%;
+    grid-template-areas: 
+    "burger"
+    "name"
+    "logo";
+    justify-items: center;
+    align-items: center;
+    border-right: 1px solid var(--gold);
+}
+
+.nav-main {
+    height: 100%;
+    width: 100%;
+    grid-area: navmain;
+    display: grid;
+    grid-template-rows: 50px auto 15%;
+    grid-template-areas: 
+    "links"
+    "links"
+    "socials";
 }
 
 .nav-burger {
@@ -68,7 +94,7 @@ ul {
 }
 
 .bar1, .bar2 {
-    width: 30px;
+    width: 33px;
     height: 2px;
     background-color: var(--gold);
     margin: 6px 0;
@@ -80,6 +106,9 @@ ul {
     writing-mode: vertical-rl;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 32px;
     letter-spacing: 2px;
 }
 
@@ -89,12 +118,16 @@ ul {
 
 .nav-logo {
     grid-area: logo;
-    max-width: 60%;
-    height: auto;
+}
+
+.nav-logo > img {
+    height: 40px;
+    width: 40px;
 }
 
 .nav-links {
     grid-area: links;
+    align-self: center;
     justify-self: start;
     padding-left: 30px;
 }
@@ -148,13 +181,37 @@ ul {
     .nav-overlay {
         grid-template-rows: 50px auto 30%;
         grid-template-areas: 
-            "logo name burger"
-            "links links links"
-            "socials socials socials";
+            "navheader navheader navheader"
+            "navmain navmain navmain"
+            "navmain navmain navmain";
+    }
+
+    .nav-header {
+        grid-template-columns: 10% auto 10%;
+        grid-template-areas: 
+        "logo name burger";
+        border: none;
+        border-bottom: 1px solid var(--gold);
     }
 
     .nav-name {
         writing-mode: horizontal-tb;
+        font-size: 28px;
+    }
+
+    .nav-logo {
+        justify-self: start;
+        padding-left: 10px;
+    }
+
+    .nav-logo > img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .nav-burger {
+        justify-self: end;
+        padding-right: 10px;
     }
 
     .nav-links, .nav-socials {
@@ -165,10 +222,32 @@ ul {
 /* NAVIGATION TOGGLE ACTIVE */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ */
 .nav-active {
+    /* height: 100vh;
+    background: linear-gradient(to right, var(--grey) 50%, var(--white) 50%);
+    background-size: 200%;
+    animation: navFade 2.5s cubic-bezier(0.3,0,0,1); */
+}
+
+.nav-active .nav-header {
+    background-color: var(--grey);
+    animation: navChange 2.5s cubic-bezier(0.3,0,0,1);
+}
+
+.nav-active .nav-main{
     height: 100vh;
     background: linear-gradient(to right, var(--grey) 50%, var(--white) 50%);
     background-size: 200%;
     animation: navFade 2.5s cubic-bezier(0.3,0,0,1);
+}
+
+@keyframes navChange {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes navFade {
