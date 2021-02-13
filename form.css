@@ -169,7 +169,7 @@ body {
     row-gap: 20px;
   }
   .stepper__form .stepper__section {
-    grid-template-columns: repeat(6, calc(50% - 20px * 2));
+    grid-template-columns: repeat(7, calc(50% - 20px * 2));
     grid-template-rows: minmax(150px, 1fr);
     overflow-x: scroll;
     -ms-scroll-snap-type: x proximity;
@@ -180,15 +180,18 @@ body {
     grid-template-rows: 40px auto;
     margin: 0 10px;
     padding: 10px;
-    border: 1px solid #143d52;
   }
   .stepper__form .stepper__section .stepper__header .stepper__number {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 50% 50%;
     justify-items: center;
   }
   .stepper__form .stepper__section .stepper__header .stepper__number .shape__line {
-    display: none;
+    margin: 0;
+    margin-left: 130%;
+    height: 40px;
+    width: 80%;
+    border: none;
+    border-top: 1px solid #143d52;
   }
   .stepper__form .stepper__section .stepper__header .stepper__title {
     grid-template-columns: 1fr;

@@ -191,7 +191,7 @@ body {
         row-gap: 20px;
         
         .stepper__section {
-            grid-template-columns: repeat(6, calc(50% - 20px * 2));
+            grid-template-columns: repeat(7, calc(50% - 20px * 2));
             grid-template-rows: minmax(150px, 1fr);
             overflow-x: scroll;
             scroll-snap-type: x proximity;
@@ -202,15 +202,18 @@ body {
                 grid-template-rows: 40px auto;
                 margin: 0 10px;
                 padding: 10px;
-                border: 1px solid $primaryColor;
 
                 .stepper__number {
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1fr;
+                    grid-template-rows: 50% 50%;
                     justify-items: center;
 
                     .shape__line {
-                        display: none;
+                        margin: 0;
+                        margin-left: 130%;
+                        height: 40px;
+                        width: 80%;
+                        border: none;
+                        border-top: 1px solid $primaryColor;
                     }
                     
                 }

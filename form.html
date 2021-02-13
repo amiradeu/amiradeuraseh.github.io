@@ -94,7 +94,7 @@
                 <div class="stepper__title">
                     <div>
                         <p>End</p>
-                        <small></small>
+                        <p><small></small></p>
                     </div>
                 </div>
             </div>
@@ -234,29 +234,6 @@
         };
 
         document.getElementById("headerA").click();
-
-        function sideScroll(direction){
-            var element = document.getElementById('scroll__section');
-            var speed = 25;     //smaller value faster
-            var distance = document.querySelector('.stepper__header').getBoundingClientRect().width;
-            var step = 10;
-            var scrollAmount = 0;
-
-            console.log(element.scrollLeft);
-            
-            var slideTimer = setInterval(function(){
-                if(direction == 'left'){
-                    element.scrollLeft -= step;
-                } else {
-                    element.scrollLeft += step;
-                }
-                scrollAmount += step;
-                if(scrollAmount >= distance){
-                    window.clearInterval(slideTimer);
-                }
-            }, speed);
-        }
-
     </script>
 </body>
 </html>
