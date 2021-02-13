@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form__info">
+        <h1>Form</h1>
+        <p>This form is very very long. So after doing a few research, sectioning the content of a form will make a better user experience. It is good practice for a user to be able to see all sections and be able to tell where the user is at in their journey to completing the form. The active section is highlighted and user should be able to move to next and previous sections.</p>
+    </div>    
+    <div class="stepper__form">
+        <div class="stepper__section" id="scroll__section">
+            <div class="stepper__header" onclick="openPage('A')" id="headerA">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">1</button>
+                    </div>
+                    <div class="shape__line"></div>
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>Section A</p>
+                        <p><small>Summarize if needed</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__header" id="headerB" onclick="openPage('B')">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">2</button>
+                    </div>
+                    <div class="shape__line"></div>
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>Section B</p>
+                        <p><small>Summarize if needed</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__header" id="headerC" onclick="openPage('C')">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">3</button>
+                    </div>
+                    <div class="shape__line"></div>
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>Section C</p>
+                        <p><small>Summarize if needed</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__header" id="headerD" onclick="openPage('D')">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">4</button>
+                    </div>
+                    <div class="shape__line"></div>
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>Section D</p>
+                        <p><small>Summarize if needed</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__header" id="headerE" onclick="openPage('E')">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">5</button>
+                    </div>
+                    <div class="shape__line"></div>
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>Section E</p>
+                        <p><small>Summarize if needed</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__header">
+                <div class="stepper__number">
+                    <div class="shape__circle">
+                        <button class="content tablink">5</button>
+                    </div>
+                    <!-- <div class="shape__line"></div> -->
+                </div>
+                <div class="stepper__title">
+                    <div>
+                        <p>End</p>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="stepper__content">
+            <div id="sectionA" class="tabcontent">
+                <div>
+                    <h3>Section A</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore sequi quibusdam esse, consequatur ipsam nostrum ad laboriosam aspernatur modi debitis harum reprehenderit quam temporibus nisi nihil quis porro incidunt.</p>
+                </div>
+                <div class="nav__buttons">
+                    <button class="next__button" type="submit" onclick="openPage('B')">Next</button>
+                </div>
+            </div>
+    
+            <div id="sectionB" class="tabcontent">
+                <div>
+                    <h3>Section B</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis perspiciatis molestiae quo explicabo sint, illum aliquid dolores vero commodi vel eveniet autem quia est provident, a praesentium voluptas aliquam.</p>
+                </div>
+                <div class="nav__buttons">
+                    <button class="previous__button" type="submit" onclick="openPage('A')">Previous</button>
+                    <button class="next__button" type="submit" onclick="openPage('C')">Next</button>
+                </div>
+            </div>
+    
+            <div id="sectionC" class="tabcontent">
+                <div>
+                    <h3>Section C</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eveniet velit cum amet. Blanditiis, voluptatum velit sint rerum tenetur libero accusantium dolorem fugiat, corrupti, dicta aperiam molestiae. Doloribus, ipsa explicabo?</p>
+                </div>
+                <div class="nav__buttons">
+                    <button class="previous__button" type="submit" onclick="openPage('B')">Previous</button>
+                    <button class="next__button" type="submit" onclick="openPage('D')">Next</button>
+                </div>
+            </div>
+    
+            <div id="sectionD" class="tabcontent">
+                <div>
+                    <h3>Section D</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, eius. Molestias pariatur sunt accusamus omnis animi veritatis. Cum numquam eaque perferendis quod dicta voluptatem, officia, voluptatum explicabo rem quidem rerum.</p>
+                </div>
+                <div class="nav__buttons">
+                    <button class="previous__button" type="submit" onclick="openPage('C')">Previous</button>
+                    <button class="next__button" type="submit" onclick="openPage('E')">Next</button>
+                </div>
+            </div>
+    
+            <div id="sectionE" class="tabcontent">
+                <div>
+                    <h3>Section E</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quae possimus omnis accusantium culpa non, similique corrupti fugit sunt vero, cumque porro alias, velit qui quod consequuntur et in eum?</p>
+                </div>
+                <div class="nav__buttons">
+                    <button class="previous__button" type="submit" onclick="openPage('D')">Previous</button>
+                    <button class="submit__button" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var openPage = (id) => {
+
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            var section = "section" + id;
+            var header = "header" + id;
+            var tabcontentid = document.getElementById(section);
+            var headerid = document.getElementById(header);
+
+            for (x of tabcontent) {
+                if(x === tabcontentid){
+                    x.style.display = "grid";
+                    x.classList.add('fadeBlock');
+                } else {
+                    x.style.display = "none";
+                    x.classList.remove('fadeBlock');
+                }
+            }
+
+            var stepper = document.getElementsByClassName("stepper__header");
+            var element = document.getElementById('scroll__section');
+            var speed = 25;     //smaller value faster
+            var distance = document.querySelector('.stepper__header').getBoundingClientRect().width;
+            var step = 10;
+            var scrollAmount = 0;
+            var location = (distance * -1);
+            var current = document.getElementsByClassName("focus");
+            var prevLoc = distance * -1;
+
+            for(x of current){
+                current = x;
+            }
+            
+            for (x of stepper) {
+                prevLoc += distance;
+                if(x === current) break;
+            }
+
+            for (x of stepper) {
+                location += distance;
+                if(x === headerid) break;
+            }
+            // console.log(prevLoc);
+            // console.log(location);
+
+            var move = location - prevLoc;
+            move = 80/100 * move;
+
+            var posMove = move;
+            if(move < 0){
+                posMove = posMove * -1;
+            }
+            // console.log(move);
+            // console.log(posMove);
+
+            var slideTimer = setInterval(function(){
+                if(move < 0){
+                    element.scrollLeft -= step;  
+                } else {
+                    element.scrollLeft += step;
+                }
+
+                scrollAmount += step;
+                if(scrollAmount >= posMove){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+
+            for (x of stepper) {
+                if(x === headerid) {
+                    x.classList.add('focus');
+                } else {
+                    x.classList.remove('focus');
+                }
+            }            
+        };
+
+        document.getElementById("headerA").click();
+
+        function sideScroll(direction){
+            var element = document.getElementById('scroll__section');
+            var speed = 25;     //smaller value faster
+            var distance = document.querySelector('.stepper__header').getBoundingClientRect().width;
+            var step = 10;
+            var scrollAmount = 0;
+
+            console.log(element.scrollLeft);
+            
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
+
+    </script>
+</body>
+</html>
+

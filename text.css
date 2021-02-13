@@ -57,12 +57,32 @@
     background-color: #ef233c;
 }
 
-.scroll3 .text {
-    font-size: 4vw;
-    letter-spacing: 1rem;
-    animation: 2s infinite linear rtl-stop;
+.scroll3 .parent-text {
     display: inline-block;
-    padding-right: 5px;
+    animation: 3s infinite linear rtl-stop;
+}
+.scroll3 .text {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.scroll3 .normal-text {
+    font-style: normal;
+    letter-spacing: 5px;
+}
+
+.scroll3 .float-text {
+    position: relative;
+    color: #fff;
+    font-size: .8vw;
+    font-weight: lighter;
+    font-family:'Courier New', Courier, monospace;
+    left: 1vw;
+}
+
+.scroll3 .parent-text div:nth-child(2) .float-text{
+    position: relative;
+    top: -30px;
 }
 
 .hor4 {
@@ -110,15 +130,13 @@
 
 .scroll6 .focus {
     display: inline-block;
-    width: 21vw;
-    color:#dc2f02;
-    animation: 1.8s infinite ease-out bigger;
+    animation: .1s infinite linear shake;
     font-size: 6vw;
 }
 
 .scroll6 .text {
     font-size: 4vw;
-    animation: 3s infinite linear xscroll;
+    animation: 2s infinite linear xscroll;
     display: inline-block;
     padding-right: 5px;
 }
@@ -173,4 +191,13 @@
 @keyframes bigger {
     from { font-size: .1vw ;}
     to { font-size: 6vw ;}
+}
+
+@keyframes shake {
+    /* star formation */
+    0% { transform: translate(0%, -3%);}
+    25% { transform: translate(3%, 3%);}
+    50% { transform: translate(-3%, -3%);}
+    75% { transform: translate(3%, -3%);}
+    100% { transform: translate(-3%, 3%);}
 }
