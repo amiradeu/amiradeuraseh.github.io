@@ -1,7 +1,5 @@
-# Website
-> Finally, my own website that I have been putting off doing cause i need more inspiration
-> and want it to look nice and ME and all
-
+# Amira Deuraseh's Portfolio
+Temporary website
 ## IN MY MIND
 - Gather inspiration
 - Outline website content
