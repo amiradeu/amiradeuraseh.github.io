@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --grey: #383838;
   --white: #F3F5F5;
@@ -15,10 +16,6 @@
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
-  margin: auto;
-  text-align: center;
   color: var(--grey);
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -37,10 +34,115 @@ img {
   width: 100px;
 }
 
-.content {
-  margin: 24px 12px;
+.main_grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 6vw;
+  grid-template-areas: "main navigation";
 }
 
+.content {
+  text-align: center;
+  grid-area: main;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.horizontal {
+  background-color: var(--grey);
+  color: var(--white);
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.horizontal .scroll li {
+  display: inline-block;
+  padding-right: 24px;
+}
+.horizontal .scroll li::before {
+  content: "☺︎ ";
+}
+.horizontal .scroll a {
+  text-decoration: none;
+  color: var(--white);
+}
+.horizontal .scroll a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+.horizontal .scroll .text {
+  -webkit-animation: 9s infinite linear xscroll;
+          animation: 9s infinite linear xscroll;
+  display: inline-block;
+}
+
+.vertical {
+  grid-area: navigation;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  background-color: var(--grey);
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.vertical .scroll li {
+  display: inline-block;
+  padding-bottom: 24px;
+}
+.vertical .scroll li::before {
+  content: "☺︎ ";
+}
+.vertical .scroll a {
+  text-decoration: none;
+  color: var(--white);
+}
+.vertical .scroll a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+.vertical .scroll .text {
+  -webkit-animation: 9s infinite linear yscroll;
+          animation: 9s infinite linear yscroll;
+  display: inline-block;
+}
+
+@-webkit-keyframes xscroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes xscroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes yscroll {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes yscroll {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
 .profile_header {
   margin-bottom: 24px;
 }

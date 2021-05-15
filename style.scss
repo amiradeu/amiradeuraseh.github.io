@@ -15,10 +15,6 @@
 }
 
 body {
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    text-align: center;
     color: var(--grey);
     font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -37,8 +33,104 @@ img {
     width: 100px;
 }
 
+.main_grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 6vw;
+    grid-template-areas: "main navigation" ;
+}
+
 .content {
-    margin: 24px 12px;
+    text-align: center;
+    grid-area: main;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.horizontal{
+    background-color: var(--grey);
+    color: var(--white);
+    height: 4vw;
+    
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .scroll  {
+        li {
+            display: inline-block;
+            padding-right: 24px;
+    
+            &::before {
+                content: "☺︎ ";
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            color: var(--white);
+    
+            &:hover {
+                color: var(--green);
+                text-decoration: underline;
+            }
+        }
+    
+        .text {
+            animation: 9s infinite linear xscroll;
+            display: inline-block;
+        }
+    }
+}
+
+.vertical {
+    grid-area: navigation;
+    writing-mode: vertical-rl;
+    
+    background-color: var(--grey);
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    
+    display:flex;
+    align-items:center;
+
+    .scroll  {
+        li {
+            display: inline-block;
+            padding-bottom: 24px;
+    
+            &::before {
+                content: "☺︎ ";
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            color: var(--white);
+    
+            &:hover {
+                color: var(--green);
+                text-decoration: underline;
+            }
+        }
+    
+        .text {
+            animation: 9s infinite linear yscroll;
+            display: inline-block;
+        }
+    }
+}
+
+@keyframes xscroll {
+    from { transform: translateX(0%);}
+    to { transform: translateX(-100%);}
+}
+
+@keyframes yscroll {
+    from { transform: translateY(0%);}
+    to { transform: translateY(-100%);}
 }
 
 .profile_header {
