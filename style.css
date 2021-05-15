@@ -48,36 +48,6 @@ img {
   margin-bottom: 24px;
 }
 
-.horizontal {
-  background-color: var(--grey);
-  color: var(--white);
-  height: 4vw;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.horizontal .scroll li {
-  display: inline-block;
-  padding-right: 24px;
-}
-.horizontal .scroll li::before {
-  content: "☺︎ ";
-}
-.horizontal .scroll a {
-  text-decoration: none;
-  color: var(--white);
-}
-.horizontal .scroll a:hover {
-  color: var(--green);
-  text-decoration: underline;
-}
-.horizontal .scroll .text {
-  -webkit-animation: 9s infinite linear xscroll;
-          animation: 9s infinite linear xscroll;
-  display: inline-block;
-}
-
 .vertical {
   grid-area: navigation;
   -ms-writing-mode: tb-rl;
@@ -110,23 +80,6 @@ img {
   display: inline-block;
 }
 
-@-webkit-keyframes xscroll {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes xscroll {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 @-webkit-keyframes yscroll {
   from {
     transform: translateY(0%);
@@ -135,6 +88,7 @@ img {
     transform: translateY(-100%);
   }
 }
+
 @keyframes yscroll {
   from {
     transform: translateY(0%);
