@@ -65,7 +65,22 @@ img {
             padding-bottom: 24px;
     
             &::before {
+                display:inline-block;
+                transform: rotate(90deg);
                 content: "☺︎ ";
+                font-size: 1.4rem;
+            }
+
+            &.active {
+                color: var(--green);
+                
+                &::before {
+                    color: var(--yellow);
+                }
+
+                a {
+                    color: var(--green);
+                }
             }
         }
     

@@ -64,7 +64,19 @@ img {
   padding-bottom: 24px;
 }
 .vertical .scroll li::before {
+  display: inline-block;
+  transform: rotate(90deg);
   content: "☺︎ ";
+  font-size: 1.4rem;
+}
+.vertical .scroll li.active {
+  color: var(--green);
+}
+.vertical .scroll li.active::before {
+  color: var(--yellow);
+}
+.vertical .scroll li.active a {
+  color: var(--green);
 }
 .vertical .scroll a {
   text-decoration: none;
