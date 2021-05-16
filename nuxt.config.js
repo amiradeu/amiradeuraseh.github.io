@@ -1,11 +1,11 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    base: 'amiradeuraseh.github.io'
+    base: '/amiradeuraseh.github.io/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
