@@ -4,9 +4,9 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  router: {
-    base: '/amiradeuraseh.github.io/'
-  },
+//   router: {
+//     base: '/amiradeuraseh.github.io/'
+//   },
   generate: {
     fallback: true
   },
