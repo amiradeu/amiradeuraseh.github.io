@@ -1,9 +1,21 @@
 # Amira Deuraseh's Portfolio
-Temporary website
-## IN MY MIND
-- Gather inspiration
-- Outline website content
-- Just code
-- Draw illustrations/stickers for web contents:
-    - navigation
-    - 404 error
+Build with NuxtJS Vue Framework ☺︎
+
+## Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
