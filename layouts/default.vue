@@ -7,6 +7,19 @@
 </template>
 
 <style>
+:root {
+    --grey: #383838;
+    --white: #F3F5F5;
+    --gold: #DCCAA9;
+    --yellow: #FFD074;
+    --pink: #F6D2DE;
+    --red: #B05C52;
+    --green: #7CAD7C;
+    --charcoal: #373633;
+    --ivory: #F2F0E7;
+    --candy: #FF2121;
+}
+
 html {
     font-family:
         'Source Sans Pro',
@@ -24,6 +37,8 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    background: var(--ivory);
+    color: var(--charcoal);
 }
 
 *,
@@ -33,24 +48,15 @@ html {
     margin: 0;
 }
 
-:root {
-    --grey: #383838;
-    --white: #F3F5F5;
-    --gold: #DCCAA9;
-    --yellow: #FFD074;
-    --pink: #F6D2DE;
-    --red: #B05C52;
-    --green: #7CAD7C;
-}
-
 .main_grid {
     height: 100vh;
     display: grid;
-    grid-template-columns: auto 12vw;
-    grid-template-rows: auto 4vh;
+    grid-template-columns: auto 48px;
+    grid-template-rows: auto 32px;
     grid-template-areas: 
     "nuxt navigation"
     "footer navigation";
+    overflow: hidden;
 }
 
 .nuxt {
