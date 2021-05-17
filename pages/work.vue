@@ -21,10 +21,13 @@ ul {
 }
 
 li {
-    border: 1px solid var(--grey);
+    border: 2px solid var(--grey);
+    color: var(--grey);
     padding: 12px 24px;
     border-radius: 24px;
     margin: 4px 4px 0 0;
+    text-transform: uppercase;
+    font-weight: 500;
 
     &:hover {
         background: var(--grey);
