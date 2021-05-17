@@ -28,7 +28,7 @@ a {
     display: block;
     height: 50vh;
     width: calc(100vw - 48px);
-    transform: scale(1.4);
+    z-index: -1000;
 }
 
 </style>
