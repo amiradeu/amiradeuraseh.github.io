@@ -37,6 +37,7 @@
             color: var(--white);
             display: inline-block;
             padding-bottom: 24px;
+            margin-bottom: 8px;
             position: relative;
             
             &.nuxt-link-exact-active {
