@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      # Checks-out repository so job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout branch
+        uses: actions/checkout@master
 
-      - name: Setup Node
+      - name: Setup node env
         uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -33,7 +33,7 @@ jobs:
       - run: npm ci
       - run: npm test
       
-      - name: Generate dist folder
+      - name: Generate dist
         run: npm run generate
       
       - name: Deploy to gh-pages
