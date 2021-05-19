@@ -27,7 +27,7 @@ a {
     background: url('~assets/contact_black.svg') no-repeat center center;
     display: block;
     height: 50vh;
-    width: calc(100vw - 48px);
+    width: calc(90vw - 48px);
     z-index: -1000;
 }
 

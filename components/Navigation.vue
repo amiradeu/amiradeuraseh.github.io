@@ -54,13 +54,6 @@
                     border-radius: 100% ;
                 }
             }
-    
-            &::before {
-                display:inline-block;
-                transform: rotate(90deg);
-                content: "☺︎ ";
-                font-size: 1.4rem;
-            }
 
             &:hover {
                 color: var(--green);
