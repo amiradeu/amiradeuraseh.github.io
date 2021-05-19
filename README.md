@@ -1,4 +1,4 @@
 # Amira Deuraseh's Portfolio
 Build with NuxtJS Vue Framework ☺︎
 
-- Work In Progress Portfolio
+- A Work-In-Progress Portfolio
