@@ -1,3 +1,3 @@
 # STATIC PORTFOLIO
 
-NuxtJS /dist folder
+NuxtJS /dist folder for Github Page
