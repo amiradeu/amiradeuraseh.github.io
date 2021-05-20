@@ -12,10 +12,9 @@
         <nav>
             <ul class="social__links">
                 <li><a href="https://amiradeuraseh.gumroad.com/">Gumroad Shop</a></li>
+                <li><a href="https://www.instagram.com/amira.deuraseh/">Instagram</a></li>
                 <li><a href="https://www.youtube.com/c/AmiraDeuraseh">Youtube</a></li>
                 <li><a href="https://twitter.com/amiradeuraseh">Twitter</a></li>
-                <li><a href="https://vt.tiktok.com/ZSJADcEWv/">Tiktok</a></li>
-                <li><a href="https://www.instagram.com/amira.deuraseh/">Instagram</a></li>
                 <li><a href="https://semenyih.universitytutor.com/tutors/1175952">Programming Tutor</a></li>
             </ul>
         </nav>
