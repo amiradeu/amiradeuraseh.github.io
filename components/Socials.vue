@@ -15,7 +15,7 @@
                 <cloud class="clouds" />
             </div>
             <div class="cloud_container">
-                <a href="https://www.instagram.com/amira.deuraseh/">Instagram</a>
+                <a href="https://www.instagram.com/amiradeuraseh/">Instagram</a>
                 <cloud class="clouds" />
             </div>
             <div class="cloud_container">
@@ -82,7 +82,7 @@
 
             font-size: .8rem;
             font-weight: bold;
-            
+
             display: flex;
             align-items: center;
             justify-content: center;
