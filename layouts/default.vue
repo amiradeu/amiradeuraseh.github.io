@@ -1,5 +1,6 @@
 <template>
     <div class="main_grid">
+        <MobileNavigation class="mobile_navigation" />
         <Nuxt class="nuxt" />
         <Navigation class="navigation" />
         <Footer class="footer" />
@@ -69,7 +70,39 @@ html {
     grid-area: navigation;
 }
 
+.mobile_navigation {
+    grid-area: mobile_nav;
+    display: none;
+}
+
+/* .mobile_navigation > * {
+    display: none !important;
+} */
+
 .footer {
     grid-area: footer;
+}
+
+/* // ============================================== // */
+/* // ============ MOBILE & TABLET view ============ // */
+/* // ============================================== // */
+@media screen and (max-width: 768px){
+    .mobile_navigation {
+        display: block;
+    }
+
+    .main_grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh auto 32px;
+        grid-template-areas: 
+        "mobile_nav"
+        "nuxt"
+        "footer";
+        
+    }
+
+    .navigation {
+        display: none !important;
+    }
 }
 </style>

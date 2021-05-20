@@ -2,10 +2,11 @@
     <nav class="vertical" aria-label="nav-vertical">
         <div class="scroll" v-for="item in 5" :key="item.id">
             <ul class="text">
-                <NuxtLink to="/home">home</NuxtLink>
+                <NuxtLink to="/">home</NuxtLink>
                 <NuxtLink to="/work">work</NuxtLink>
+                <NuxtLink to="/tutor">tutor</NuxtLink>
+                <NuxtLink to="/writing">writing</NuxtLink>
                 <NuxtLink to="/about">about</NuxtLink>
-                <NuxtLink to="/">socials</NuxtLink>
                 <NuxtLink to="/contact">contact</NuxtLink>
             </ul>
         </div>

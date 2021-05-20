@@ -1,34 +1,28 @@
 <template>
   <div>
-        <a href="mailto:hello@amiradeuraseh.com">
-            <span class="contact_image"></span>
-        </a>
+        <Socials />
+        <Contact />
   </div>
 </template>
 
 <script>
-
+export default {}
 </script>
 
-<style lang="scss" scoped>
+<style>
+
+
 a {
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-        .contact_image {
-            background: url('~assets/contact_green.svg') no-repeat center center;
-        }
-    }
+    color: var(--grey);
 }
 
-.contact_image {
-    background: url('~assets/contact_black.svg') no-repeat center center;
-    display: block;
-    height: 50vh;
-    width: calc(90vw - 48px);
-    z-index: -1000;
+ul {
+    list-style: none;
 }
 
+img {
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+}
 </style>
