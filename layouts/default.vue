@@ -56,7 +56,6 @@ html {
     grid-template-areas: 
     "nuxt navigation"
     "footer navigation";
-    overflow: hidden;
 }
 
 .nuxt {
