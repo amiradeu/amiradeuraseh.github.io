@@ -9,69 +9,110 @@
             </ul>
         </div>
         
-        <nav>
-            <ul class="social__links">
-                <li><a href="https://amiradeuraseh.gumroad.com/">Gumroad Shop</a></li>
-                <li><a href="https://www.instagram.com/amira.deuraseh/">Instagram</a></li>
-                <li><a href="https://www.youtube.com/c/AmiraDeuraseh">Youtube</a></li>
-                <li><a href="https://twitter.com/amiradeuraseh">Twitter</a></li>
-                <li><a href="https://semenyih.universitytutor.com/tutors/1175952">Programming Tutor</a></li>
-            </ul>
+        <nav aria-label="main_nav" class="main_nav">
+            <div class="cloud_container">
+                <a href="https://amiradeuraseh.gumroad.com/">Gumroad Shop</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://www.instagram.com/amira.deuraseh/">Instagram</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://www.youtube.com/c/AmiraDeuraseh">Youtube</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://twitter.com/amiradeuraseh">Twitter</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://github.com/amiradeu">Github</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://codepen.io/amiradeuraseh">Codepen</a>
+                <cloud class="clouds" />
+            </div>
+            <div class="cloud_container">
+                <a href="https://semenyih.universitytutor.com/tutors/1175952">Programming Tutor</a>
+                <cloud class="clouds" />
+            </div>
         </nav>
-        
     </div>
 </template>
 
 <script>
+    import cloud from "~/assets/circle_cloud.svg?inline"
     export default {
-        
+        components: { cloud }
     }
 </script>
 
 <style lang="scss" scoped>
+
+.main_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+
+
+    .cloud_container {
+        position: relative;    
+
+        .clouds {
+            -webkit-animation:spin 32s linear infinite;
+            -moz-animation:spin 32s linear infinite;
+            animation:spin 32s linear infinite;
+            height: 8rem;
+            width: auto;
+            z-index: -9000;
+        }
+
+        a {
+            z-index: 1000;
+            text-decoration: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            padding: 10%;
+
+            font-size: .8rem;
+            font-weight: bold;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: var(--green);
+            }
+
+            &:hover+.clouds {
+                .outline {
+                    fill: var(--grey);
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
 .content {
     text-align: center;
 }
 
 .profile_header {
     margin-bottom: 24px;
-}
-
-.social__links {
-    display: grid;
-    row-gap: 16px;
-    justify-items: center;
-
-    a {
-        display:inline-block;
-        width:100%;
-        height:100%;
-        padding: 16px;
-        border-radius: 8px;
-    }
-
-    li {
-        border: 1px solid var(--grey);
-        border-radius: 8px;
-        width: 200px;
-    
-        &:hover {
-            cursor: pointer;
-            background-color: #3e3e3e;
-    
-            a {
-                color: var(--white);
-            }
-        }
-    }
-}
-
-footer {
-    margin-top: 12px;
-    font-size: .7rem;
-
-    a {
-        display: inline;
-    }
 }
 </style>
