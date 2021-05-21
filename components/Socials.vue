@@ -25,6 +25,8 @@
                 </a>
                 <twitter class="socials" />
             </div>
+        </nav>
+        <nav aria-label="main_nav" class="main_nav">
             <div class="cloud_container">
                 <a href="https://github.com/amiradeu">
                     <fa :icon="['fab', 'github']" class="brand_icons"/>
@@ -74,6 +76,10 @@
 </script>
 
 <style lang="scss" scoped>
+.content {
+    display: flex;
+    justify-content: center;
+}
 
 .main_nav {
     display: flex;
@@ -81,13 +87,13 @@
     justify-content: center;
     gap: 16px;
 
-
     .cloud_container {
-        position: relative;    
+        position: relative;
+        height: 8rem;
 
         .brand_icons {
-            height: 25px;
-            font-size: 25px;
+            height: 32px;
+            font-size: 32px;
             color: var(--grey);
 
             .outline {
@@ -105,7 +111,7 @@
         }
 
         .socials {
-            height: 8rem;
+            height: 100%;
             width: auto;
             z-index: -9000;
 
@@ -168,7 +174,6 @@
     }
 }
 
-
 @keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
@@ -178,9 +183,42 @@
 
 .content {
     text-align: center;
+    gap: 16px;
 }
 
 .profile_header {
     margin-bottom: 24px;
+}
+
+// tablet
+@media screen and (max-width:1025px)  {
+    .content {
+        display: block;
+    }
+
+    .cloud_container {
+        height: 6rem !important;
+
+        .brand_icons {
+            height: 28px !important;
+            font-size: 28px !important;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 481px){
+    .content {
+        display: block;
+    }
+
+    .cloud_container {
+        height: 4rem !important;
+
+        .brand_icons {
+            height: 24px !important;
+            font-size: 24px !important;
+        }
+    }
 }
 </style>
