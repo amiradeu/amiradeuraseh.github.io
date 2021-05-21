@@ -1,14 +1,10 @@
 <template>
     <nav class="nav__sidebar" aria-label="nav-vertical">
-        <div v-for="item in 5" :key="item.id">
-            <ul class="text">
-                <NuxtLink to="/">about</NuxtLink>
-                <NuxtLink to="/work">work</NuxtLink>
-                <NuxtLink to="/tutor">tutor</NuxtLink>
-                <NuxtLink to="/writing">writing</NuxtLink>
-                <NuxtLink to="/contact">contact</NuxtLink>
-            </ul>
-        </div>
+        <NuxtLink to="/">about</NuxtLink>
+        <NuxtLink to="/work">work</NuxtLink>
+        <NuxtLink to="/tutor">tutor</NuxtLink>
+        <NuxtLink to="/writing">writing</NuxtLink>
+        <NuxtLink to="/contact">contact</NuxtLink>
     </nav>
 </template>
 
@@ -17,13 +13,10 @@
     writing-mode: vertical-rl;
     border-left: 2px solid var(--grey);
 
-    width: 48px;
-    min-height: 100vh;
-    height: 100%;
+    width: fit-content;
     display:flex;
     align-items:center;
-    white-space: nowrap;
-    overflow: hidden;
+    justify-content: center;
 
     a {
         text-decoration: none;
@@ -44,17 +37,12 @@
                 width: 50%;
                 height: 100%;
                 top: 0%;
-                left: 20%;
+                left: 22%;
                 content: "";
                 border: 1px solid var(--green);
                 border-radius: 100% ;
             }
         }
-    }
-
-    .text {
-        animation: 9s infinite linear yscroll;
-        display: inline-block;
     }
 }
 
