@@ -4,7 +4,7 @@
         aria-label="nav-horizontal"
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
-            <div><NuxtLink to="/" class="home"></NuxtLink></div>
+            <NuxtLink to="/" class="home"><logo class="brand_logo" /></NuxtLink>
             <div class="cloud_container">
                 <div class="b-menu" @click="toggleNav">
                     <div class="b-bun b-bun--top"></div>
@@ -30,9 +30,10 @@
 
 <script>
 import cloud from "~/assets/circle_cloud.svg?inline"
+import logo from "~/assets/brand_logo.svg?inline"
 
 export default {
-    components: { cloud },
+    components: { cloud, logo },
     data() {
         return {
             selected : false
@@ -101,16 +102,9 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     align-items: center;
     position: sticky;
 
-
-    .home {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background-color: var(--grey);
-
-        &:hover {
-            background-color: var(--green);
-        }
+    .brand_logo {
+        height: 10vh;
+        width: fit-content;
     }
 
     &.open {
