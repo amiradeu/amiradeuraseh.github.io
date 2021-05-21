@@ -103,7 +103,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     overflow: hidden;
 
     .brand_logo {
-        height: 10vh;
+        height: 100px;
         width: fit-content;
     }
 
@@ -149,7 +149,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         -webkit-animation:spin 32s linear infinite;
         -moz-animation:spin 32s linear infinite;
         animation:spin 32s linear infinite;
-        height: 10vh;
+        height: 100px;;
         width: auto;
         z-index: -9000;
 
