@@ -4,7 +4,7 @@
         aria-label="nav-mobile"
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
-            <NuxtLink to="/" class="home"></NuxtLink>
+            <div @click="toggleNav"><NuxtLink to="/" class="home"></NuxtLink></div>
             <div class="cloud_container">
                 <div class="b-menu" @click="toggleNav">
                     <div class="b-bun b-bun--top"></div>
@@ -22,7 +22,6 @@
             <NuxtLink to="/work">work</NuxtLink>
             <NuxtLink to="/tutor">tutor</NuxtLink>
             <NuxtLink to="/writing">writing</NuxtLink>
-            <NuxtLink to="/about">about</NuxtLink>
             <NuxtLink to="/contact">contact</NuxtLink>
         </div>
     </nav>
@@ -113,6 +112,14 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     }
 
     &.open {
+        .home {
+            background-color: var(--white);
+            
+            &:hover {
+                background-color: var(--green);
+            }
+        }
+
         background-color: transparent;
 
         .b-bun--top {
