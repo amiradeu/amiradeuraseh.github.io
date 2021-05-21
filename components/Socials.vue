@@ -98,6 +98,11 @@
         .brand_icons {
             height: 25px;
             font-size: 25px;
+            color: var(--grey);
+
+            .outline {
+                fill: var(--grey);
+            }
         }
 
         .clouds {
@@ -140,12 +145,6 @@
                 color: var(--green);
             }
 
-            &:hover+.clouds {
-                .outline {
-                    fill: var(--grey);
-                }
-            }
-
             &:hover+.socials {
                 -webkit-animation:spin 32s linear infinite;
                 -moz-animation:spin 32s linear infinite;
@@ -166,8 +165,14 @@
                 }
             }
 
-            &:hover+.brand_icons {
-                color: pink;
+            &:hover, &:active {
+                .brand_icons {
+                    color: var(--green);
+                
+                .outline {
+                        fill: var(--green);
+                    }
+                }
             }
         }
     }
