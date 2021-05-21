@@ -25,6 +25,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss">
 :root {
     --grey: #383838;
@@ -67,6 +68,14 @@ html {
     margin: 0;
 }
 
+a {
+    color: var(--grey);
+}
+
+ul {
+    list-style: none;
+}
+
 .navOpen {
     .nuxt, .footer {
         display: none;
@@ -78,7 +87,6 @@ html {
     min-height: 100vh;
     grid-template-columns: minmax(0, 1fr) min-content;    
     grid-template-rows: min-content auto min-content;
-
     grid-template-areas:
     "nav_horizontal nav_vertical" 
     "nuxt nav_vertical"

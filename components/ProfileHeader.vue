@@ -17,5 +17,13 @@
 </script>
 
 <style lang="scss" scoped>
+div {
+    justify-items: center;
+}
 
+img {
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+}
 </style>
