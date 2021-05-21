@@ -136,7 +136,7 @@
             align-items: center;
             justify-content: center;
 
-            &:hover {
+            &:hover, &:active {
                 color: var(--green);
             }
 
@@ -147,6 +147,16 @@
             }
 
             &:hover+.socials {
+                -webkit-animation:spin 32s linear infinite;
+                -moz-animation:spin 32s linear infinite;
+                animation:spin 32s linear infinite;
+
+                .text {
+                    fill: var(--green);
+                }
+            }
+
+            &:active+.socials {
                 -webkit-animation:spin 32s linear infinite;
                 -moz-animation:spin 32s linear infinite;
                 animation:spin 32s linear infinite;
