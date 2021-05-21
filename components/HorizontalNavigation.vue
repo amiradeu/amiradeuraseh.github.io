@@ -108,11 +108,9 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     }
 
     &.open {
-        .home {
-            background-color: var(--white);
-            
-            &:hover {
-                background-color: var(--green);
+        .brand_logo {
+            .shapes {
+                stroke: var(--white);
             }
         }
 
