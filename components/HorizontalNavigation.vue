@@ -248,6 +248,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         text-transform: uppercase;
         font-size: 11vh;
         font-weight: bold;
+        animation-delay: 2s;
         animation: textslide 1.5s ease;
 
         &:hover, &:active {
