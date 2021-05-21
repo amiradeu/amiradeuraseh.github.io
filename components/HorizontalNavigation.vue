@@ -230,37 +230,27 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         width: 100%;
         display: flex;
         flex-direction: column;
-        row-gap: 12px;
+        row-gap: 1vh;
         padding-left: 12vw;
-        
-        // @for $i from 1 through 5 {
-        //     a:nth-child(#{$i}n) {
-        //         animation-delay: #{$i * 0.2}s;
-        //     }
-        // }
-
-        // a {
-        //     animation: textslide 1.5s cubic-bezier(.42,0,0,.67);
-        // }
     }
 
     .box-links {
         position: relative;
         width: 100%;
         height: 12vh;
+        overflow: hidden;
     }
 
     a {
         position: absolute;
-        // transform: translate(0px);
         color: var(--white);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 12vh;
+        font-size: 11vh;
         font-weight: bold;
         animation: textslide 1.5s ease;
 
-        &:hover {
+        &:hover, &:active {
             color: var(--green);
         }
     }
@@ -277,10 +267,10 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
 
 @keyframes textslide {
     0% {
-        transform:translateY(-2000px);
+        bottom: 100%;
     }
     100% {
-        transform:translateY(0px)
+        bottom: -10%;
     }
 }
 
