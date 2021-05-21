@@ -19,11 +19,11 @@
             class="b-links" 
             :class="{ open: selected === true}"
             @click="toggleNav" >
-            <NuxtLink to="/">about</NuxtLink>
-            <NuxtLink to="/work">work</NuxtLink>
-            <NuxtLink to="/tutor">tutor</NuxtLink>
-            <NuxtLink to="/writing">writing</NuxtLink>
-            <NuxtLink to="/contact">contact</NuxtLink>
+            <div class="box-links"><NuxtLink to="/">about</NuxtLink></div>
+            <div class="box-links"><NuxtLink to="/work">work</NuxtLink></div>
+            <div class="box-links"><NuxtLink to="/tutor">tutor</NuxtLink></div>
+            <div class="box-links"><NuxtLink to="/writing">writing</NuxtLink></div>
+            <div class="box-links"><NuxtLink to="/contact">contact</NuxtLink></div>
         </div>
     </nav>
 </template>
@@ -227,25 +227,38 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     display: none;
 
     &.open {
-        display: grid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         row-gap: 12px;
+        padding-left: 12vw;
         
-        @for $i from 1 through 5 {
-            a:nth-child(#{$i}n) {
-                animation-delay: #{$i * 0.2}s;
-            }
-        }
+        // @for $i from 1 through 5 {
+        //     a:nth-child(#{$i}n) {
+        //         animation-delay: #{$i * 0.2}s;
+        //     }
+        // }
 
-        a {
-            animation: textslide 1.5s cubic-bezier(.42,0,0,.67);
-        }
+        // a {
+        //     animation: textslide 1.5s cubic-bezier(.42,0,0,.67);
+        // }
+    }
+
+    .box-links {
+        position: relative;
+        width: 100%;
+        height: 12vh;
     }
 
     a {
+        position: absolute;
+        // transform: translate(0px);
         color: var(--white);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 2.4rem;
+        font-size: 12vh;
+        font-weight: bold;
+        animation: textslide 1.5s ease;
 
         &:hover {
             color: var(--green);
@@ -264,10 +277,10 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
 
 @keyframes textslide {
     0% {
-        transform:translateX(-2000px);
+        transform:translateY(-2000px);
     }
     100% {
-        transform:translateX(0px)
+        transform:translateY(0px)
     }
 }
 
