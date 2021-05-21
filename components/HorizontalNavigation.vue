@@ -100,7 +100,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    overflow: hidden;
 
     .brand_logo {
         height: 10vh;
