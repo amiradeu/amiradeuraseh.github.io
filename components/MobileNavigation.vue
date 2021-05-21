@@ -132,9 +132,10 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         }
 
         .cloud_container:hover{
-            .clouds .outline{
-                color: var(--green);
-                fill: var(--green);
+            .clouds {
+                .outline {
+                    fill: var(--green);
+                }                
             }
         }
     }
@@ -150,8 +151,9 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         height: 4rem;
         width: auto;
         z-index: -9000;
-        
+
         .outline {
+            stroke: var(--grey);
             stroke-width: 4;
         }
     }
@@ -219,9 +221,14 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         display: grid;
         row-gap: 12px;
         
+        @for $i from 1 through 5 {
+            a:nth-child(#{$i}n) {
+                animation-delay: #{$i * 0.2}s;
+            }
+        }
+
         a {
-            animation-delay: 2.5s;
-            animation: text-show 1.5s cubic-bezier(.42,0,0,.67);
+            animation: textslide 1.5s cubic-bezier(.42,0,0,.67);
         }
     }
 
@@ -237,9 +244,18 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     }
 }
 
-@keyframes text-show {
+@keyframes fadein {
     0% {
-        transform:translateX(-200px);
+        opacity: 0%;
+    }
+    75% {
+        opacity: 100%;
+    }
+}
+
+@keyframes textslide {
+    0% {
+        transform:translateX(-2000px);
     }
     100% {
         transform:translateX(0px)
