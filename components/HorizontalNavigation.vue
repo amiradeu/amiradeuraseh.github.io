@@ -4,7 +4,7 @@
         aria-label="nav-mobile"
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
-            <div @click="toggleNav"><NuxtLink to="/" class="home"></NuxtLink></div>
+            <div><NuxtLink to="/" class="home"></NuxtLink></div>
             <div class="cloud_container">
                 <div class="b-menu" @click="toggleNav">
                     <div class="b-bun b-bun--top"></div>
@@ -19,6 +19,7 @@
             class="b-links" 
             :class="{ open: selected === true}"
             @click="toggleNav" >
+            <NuxtLink to="/">about</NuxtLink>
             <NuxtLink to="/work">work</NuxtLink>
             <NuxtLink to="/tutor">tutor</NuxtLink>
             <NuxtLink to="/writing">writing</NuxtLink>
@@ -40,6 +41,7 @@ export default {
     methods: {
         toggleNav() {
             this.selected = !this.selected;
+            this.$emit("navOpen", this.selected);
         }
     }
 }
@@ -68,7 +70,6 @@ $b-pad-left: ($b-height / 2 - $b-bun-width-half - 2); //Horizontally centers bun
 $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in menu
 
 .nav__mobile {
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 12vh auto;
@@ -85,6 +86,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     transition: all 1.5s cubic-bezier(.42,0,0,.67);
 
     &.open {
+        height: 100vh;
         z-index: 9000;
         background-position: 0 0;   
     }

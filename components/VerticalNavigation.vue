@@ -1,4 +1,5 @@
 <template>
+    <!-- <div><h1>testing</h1></div> -->
     <nav class="vertical" aria-label="nav-vertical">
         <div class="scroll" v-for="item in 5" :key="item.id">
             <ul class="text">
@@ -14,9 +15,8 @@
 
 <style lang="scss" scoped>
 .vertical {
-    height: 100%;
-    width: 100%;
-    grid-area: navigation;
+    height: 100vh;
+    width: 64px;
     writing-mode: vertical-rl;
     
     background-color: var(--grey);

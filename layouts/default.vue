@@ -1,13 +1,31 @@
 <template>
-    <div class="main_grid">
-        <MobileNavigation class="mobile_navigation" />
-        <Nuxt class="nuxt" />
-        <Navigation class="navigation" />
+    <div
+        class="default_grid_layout"
+        :class="{ navOpen: state === true}" >
+        <HorizontalNavigation
+            class="navigation__horizontal"
+            @navOpen="updateNavState" />
+        <Nuxt class="nuxt"/>
+        <VerticalNavigation class="navigation__vertical" />
         <Footer class="footer" />
     </div>
 </template>
 
-<style>
+<script>
+export default {
+    data() {
+        return {
+            state: false
+        }
+    },
+    methods: {
+        updateNavState( navState ) {
+            this.state = navState;
+        }
+    }
+}
+</script>
+<style lang="scss">
 :root {
     --grey: #383838;
     --white: #F3F5F5;
@@ -49,60 +67,54 @@ html {
     margin: 0;
 }
 
-.main_grid {
-    height: 100vh;
+.navOpen {
+    .nuxt, .footer {
+        display: none;
+    }
+}
+
+.default_grid_layout {
     display: grid;
-    grid-template-columns: auto 48px;
-    grid-template-rows: auto 32px;
-    grid-template-areas: 
-    "nuxt navigation"
-    "footer navigation";
-}
+    min-height: 100vh;
+    grid-template-columns: minmax(0, 1fr) min-content;    
+    grid-template-rows: min-content auto min-content;
 
-.nuxt {
-    grid-area: nuxt;
-    padding: 24px 0;
-    align-self: center;
-    justify-self: center;
-}
+    grid-template-areas:
+    "nav_horizontal nav_vertical" 
+    "nuxt nav_vertical"
+    "footer nav_vertical";
 
-.navigation {
-    grid-area: navigation;
-}
+    .navigation__horizontal {
+        grid-area: nav_horizontal;
+    }
 
-.mobile_navigation {
-    grid-area: mobile_nav;
-    display: none;
-}
+    .nuxt {
+        grid-area: nuxt;
+        padding: 24px 0;
+    }
 
-/* .mobile_navigation > * {
-    display: none !important;
-} */
+    .navigation__vertical {
+        grid-area: nav_vertical;
+    }
 
-.footer {
-    grid-area: footer;
+    .footer {
+        grid-area: footer;
+    }
 }
 
 /* // ============================================== // */
 /* // ============ MOBILE & TABLET view ============ // */
 /* // ============================================== // */
 @media screen and (max-width: 768px){
-    .mobile_navigation {
-        display: block;
-    }
+    .default_grid_layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
 
-    .main_grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 10vh auto 32px;
-        grid-template-areas: 
-        "mobile_nav"
-        "nuxt"
-        "footer";
-        
-    }
-
-    .navigation {
-        display: none !important;
+        .navigation__vertical {
+            display: none !important;
+        }
     }
 }
 </style>

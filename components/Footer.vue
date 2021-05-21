@@ -10,9 +10,14 @@
 <style lang="scss" scoped>
 footer {
     text-align: center;
+    padding-bottom: 12px;
 }
 
 #love {
-    color: var(--candy);
+    color: var(--green);
+}
+
+a:hover, a:active {
+    color: var(--green);
 }
 </style>
