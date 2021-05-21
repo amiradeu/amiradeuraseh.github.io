@@ -110,7 +110,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     &.open {
         .brand_logo {
             .shapes {
-                stroke: var(--white);
+                stroke: var(--ivory);
             }
         }
 
@@ -119,7 +119,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         .b-bun--top {
             background: var(--green);
             top: 5px;
-            transform: rotate(45deg);
+            transform: rotate(30deg);
         }
 
         .b-bun--mid {
@@ -128,14 +128,23 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
 
         .b-bun--bottom {
             background: var(--green);
-            top: -5px;
-            transform: rotate(-45deg);
+            top: -6px;
+            transform: rotate(-30deg);
+        }
+
+        .cloud_container{
+            .clouds {
+                .outline {
+                    fill: var(--black);
+                    stroke: var(--green);
+                }                
+            }
         }
 
         .cloud_container:hover{
             .clouds {
                 .outline {
-                    fill: var(--green);
+                    fill: var(--ivory);
                 }                
             }
         }
@@ -181,12 +190,12 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         user-select: none;
 
         &:hover .b-bun {
-            background: var(--grey);
+            background: var(--green);
         }
 
         &:hover+.clouds {
             .outline {
-                fill: var(--green);
+                stroke: var(--green);
             }
         }
     }
