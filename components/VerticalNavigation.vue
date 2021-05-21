@@ -1,7 +1,6 @@
 <template>
-    <!-- <div><h1>testing</h1></div> -->
-    <nav class="vertical" aria-label="nav-vertical">
-        <div class="scroll" v-for="item in 5" :key="item.id">
+    <nav class="nav__sidebar" aria-label="nav-vertical">
+        <div v-for="item in 5" :key="item.id">
             <ul class="text">
                 <NuxtLink to="/">about</NuxtLink>
                 <NuxtLink to="/work">work</NuxtLink>
@@ -14,56 +13,48 @@
 </template>
 
 <style lang="scss" scoped>
-.vertical {
-    height: 100vh;
-    width: 64px;
+.nav__sidebar {
     writing-mode: vertical-rl;
-    
-    background-color: var(--grey);
-    color: var(--white);
-    white-space: nowrap;
-    overflow: hidden;
-    
+    border-left: 2px solid var(--grey);
+
+    width: 48px;
+    min-height: 100vh;
+    height: 100%;
     display:flex;
     align-items:center;
-    
-    ul {
-        padding: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    a {
+        text-decoration: none;
+        padding: 16px;
+        position: relative;
+        font-weight: bold;
+
+        &:hover, &:active {
+            color: var(--green);
+        }
+
+        &.nuxt-link-exact-active {
+            color: var(--green);
+
+            // ellipse
+            &::after {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0%;
+                left: 20%;
+                content: "";
+                border: 1px solid var(--green);
+                border-radius: 100% ;
+            }
+        }
     }
 
-    .scroll  {
-        a {
-            text-decoration: none;
-            color: var(--white);
-            display: inline-block;
-            padding-bottom: 24px;
-            margin-bottom: 8px;
-            position: relative;
-            
-            &.nuxt-link-exact-active {
-                color: var(--green);
-
-                // ellipse
-                &::after {
-                    position: absolute;
-                    width: 120%;
-                    height: 120%;
-                    bottom: 0%;
-                    content: "";
-                    border: 1px solid var(--green);
-                    border-radius: 100% ;
-                }
-            }
-
-            &:hover {
-                color: var(--green);
-            }
-        }
-    
-        .text {
-            animation: 9s infinite linear yscroll;
-            display: inline-block;
-        }
+    .text {
+        animation: 9s infinite linear yscroll;
+        display: inline-block;
     }
 }
 

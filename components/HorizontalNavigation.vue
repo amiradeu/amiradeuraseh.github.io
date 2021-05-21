@@ -1,7 +1,7 @@
 <template>
     <nav
-        class="nav__mobile"
-        aria-label="nav-mobile"
+        class="nav__topbar"
+        aria-label="nav-horizontal"
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
             <div><NuxtLink to="/" class="home"></NuxtLink></div>
@@ -69,7 +69,7 @@ $b-bun-width-half: ($b-bun-width / 2); //Half bun width used for calculation
 $b-pad-left: ($b-height / 2 - $b-bun-width-half - 2); //Horizontally centers bun in menu
 $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in menu
 
-.nav__mobile {
+.nav__topbar {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 12vh auto;
