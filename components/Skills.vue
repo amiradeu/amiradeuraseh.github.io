@@ -1,7 +1,8 @@
 <template>
     <ul>
+        <li>NuxtJs</li>
         <li>Vue</li>
-        <li>Android Kotlin</li>
+        <li>Kotlin</li>
         <li>Android Development</li>
         <li>React</li>
         <li>Javascript</li>

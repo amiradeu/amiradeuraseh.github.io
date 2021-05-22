@@ -119,4 +119,11 @@ ul {
         display: none;
     }
 }
+
+// mobile
+@media screen and (max-width: 728px){
+    .nuxt {
+        padding-top: 16vh;
+    }
+}
 </style>

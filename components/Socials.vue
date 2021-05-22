@@ -1,6 +1,6 @@
 <template>
     <div class="content">        
-        <nav aria-label="main_nav" class="main_nav">
+        <nav aria-label="main_nav" class="main_nav socmed">
             <div class="cloud_container">
                 <a href="https://amiradeuraseh.gumroad.com/">
                     <gumroad_icon class="brand_icons"/>
@@ -91,6 +91,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+
+    &.socmed {
+        padding-bottom: 16px;
+    }
 
     .cloud_container {
         position: relative;

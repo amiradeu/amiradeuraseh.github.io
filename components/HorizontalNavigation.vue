@@ -289,6 +289,33 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
 
 // mobile
 @media screen and (max-width: 728px){
+    .b-bun {
+        &--top {
+            height: 1px;
+            width: 20px;
+        }
+
+        &--mid {
+            height: 1px;
+            width: 20px;
+        }
+
+        &--bottom {
+            height: 1px;
+            width: 20px;
+        }
+    }
+
+    .b-links {
+        .box-links {
+            height: 8.7vh;
+        }
+
+        a {
+            font-size: 8vh;
+        }
+    }
+    
     .nav__topbar {
         grid-template-rows: min-content auto;
     }
@@ -316,8 +343,8 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         }
 
         .cloud_container {
-            padding-top: 8px;
-            padding-right: 8px;
+            margin-top: 8px;
+            margin-right: 8px;
             grid-area: burger;
             justify-self: end;
 
