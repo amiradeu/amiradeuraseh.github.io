@@ -14,7 +14,6 @@
                 </div>
                 <cloud class="clouds" />
             </div>
-            
         </div>
         <div
             class="b-links" 
@@ -116,6 +115,10 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         }
 
         background-color: transparent;
+
+        .horizontal_links {
+            display: none;
+        }
 
         .b-bun--top {
             background: var(--candy);
