@@ -15,5 +15,6 @@ h1 {
     background-color: var(--ivory);
     color: var(--green);
     text-transform: uppercase;
+    cursor: default;
 }
 </style>
