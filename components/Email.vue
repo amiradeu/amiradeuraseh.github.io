@@ -36,7 +36,8 @@ a {
 }
 
 .contact_graphics {
-    width: 100%;
+    max-width: 80vw;
+    max-height: 50vh;
     transform: rotate3d(1, 1, -1, 45deg);
 
     // -webkit-transform: rotateX(21deg) rotateY(-19deg) rotateZ(70deg) skewX(-37deg) skewY(43deg);
