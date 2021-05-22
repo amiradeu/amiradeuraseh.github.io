@@ -105,6 +105,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     .brand_logo {
         height: 100px;
         width: fit-content;
+        max-width: 100px;
     }
 
     &.open {
