@@ -1,14 +1,14 @@
 <template>
-    <div
-        class="default_grid_layout"
+    <main
+        class="main__layout"
         :class="{ navOpen: state === true}" >
         <HorizontalNavigation
-            class="navigation__horizontal"
+            class="navigation__sticky"
             @navOpen="updateNavState" />
-        <Nuxt class="nuxt"/>
-        <VerticalNavigation class="navigation__vertical" />
-        <Footer class="footer" />
-    </div>
+        <Background class="background" />
+        <Nuxt class="nuxt" />
+        <Scroll class="scroll__indicator" />
+    </main>
 </template>
 
 <script>
@@ -59,6 +59,7 @@ html {
     box-sizing: border-box;
     background: var(--ivory);
     color: var(--charcoal);
+    scroll-behavior: smooth;
 }
 
 *,
@@ -66,6 +67,7 @@ html {
 *::after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -76,53 +78,45 @@ ul {
     list-style: none;
 }
 
-.navOpen {
-    .nuxt, .footer {
-        display: none;
-    }
-}
-
-.default_grid_layout {
-    display: grid;
+.main__layout {
     min-height: 100vh;
-    grid-template-columns: minmax(0, 1fr) min-content;    
-    grid-template-rows: min-content auto min-content;
-    grid-template-areas:
-    "nav_horizontal nav_vertical" 
-    "nuxt nav_vertical"
-    "footer nav_vertical";
-
-    .navigation__horizontal {
-        grid-area: nav_horizontal;
-    }
-
-    .nuxt {
-        grid-area: nuxt;
-        padding: 24px 0;
-    }
-
-    .navigation__vertical {
-        grid-area: nav_vertical;
-    }
-
-    .footer {
-        grid-area: footer;
-    }
 }
 
-/* // ============================================== // */
-/* // ============ MOBILE & TABLET view ============ // */
-/* // ============================================== // */
-@media screen and (max-width: 768px){
-    .default_grid_layout {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
+.navigation__sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
 
-        .navigation__vertical {
-            display: none !important;
-        }
+.nuxt {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding-top: 12vh;
+}
+
+.background {
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.scroll__indicator {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+.navOpen {
+    .nuxt {
+        display: none;
     }
 }
 </style>

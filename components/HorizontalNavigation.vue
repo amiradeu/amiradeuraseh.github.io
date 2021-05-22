@@ -5,6 +5,7 @@
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
             <NuxtLink to="/" class="home"><logo class="brand_logo" /></NuxtLink>
+            <NavLinks class="horizontal_links" />
             <div class="cloud_container">
                 <div class="b-menu" @click="toggleNav">
                     <div class="b-bun b-bun--top"></div>
@@ -117,7 +118,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         background-color: transparent;
 
         .b-bun--top {
-            background: var(--green);
+            background: var(--candy);
             top: 5px;
             transform: rotate(30deg);
         }
@@ -127,7 +128,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         }
 
         .b-bun--bottom {
-            background: var(--green);
+            background: var(--candy);
             top: -6px;
             transform: rotate(-30deg);
         }
@@ -190,7 +191,7 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
         user-select: none;
 
         &:hover .b-bun {
-            background: var(--green);
+            background: var(--candy);
         }
 
         &:hover+.clouds {
@@ -280,6 +281,53 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
     100% {
         -webkit-transform: rotate(360deg);
         transform:rotate(360deg);
+    }
+}
+
+// mobile
+@media screen and (max-width: 728px){
+    .nav__topbar {
+        grid-template-rows: min-content auto;
+    }
+
+    .b-container {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content auto;
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
+        row-gap: 8px;
+
+        .home {
+            padding-top: 8px;
+            padding-left: 8px;
+            grid-area: logo;
+            height: 50px;
+            justify-self: start;
+        }
+
+        .brand_logo {
+            height: 50px;
+        }
+
+        .cloud_container {
+            padding-top: 8px;
+            padding-right: 8px;
+            grid-area: burger;
+            justify-self: end;
+
+            .clouds {
+                height: 50px;
+            }
+        }
+
+        .horizontal_links {
+            grid-area: nav;
+            justify-content: center;
+            margin-bottom: 24px;
+        }        
     }
 }
 </style>

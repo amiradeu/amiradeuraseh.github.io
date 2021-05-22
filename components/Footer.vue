@@ -11,13 +11,18 @@
 footer {
     text-align: center;
     padding-bottom: 12px;
+    cursor: default;
 }
 
 #love {
     color: var(--green);
 }
 
-a:hover, a:active {
+a {
     color: var(--green);
+}
+
+a:hover, a:active {
+    color: var(--candy);
 }
 </style>

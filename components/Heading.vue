@@ -1,10 +1,12 @@
 <template>
-  <div>
-        <Heading v-bind:title="'work'" />
-        <Skills />
-        <Footer />
-  </div>
+    <h1>{{ title }}</h1>
 </template>
+
+<script>
+    export default {
+        props: ['title']
+    }
+</script>
 
 <style lang="scss" scoped>
 h1 {

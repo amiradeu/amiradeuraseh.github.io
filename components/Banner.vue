@@ -18,6 +18,7 @@
     display: flex;
     white-space: nowrap;
     overflow: hidden;
+    cursor: default;
 }
 
 h1 {
@@ -25,6 +26,7 @@ h1 {
     font-size: 24vh;
     animation: 24s infinite linear xscroll;
     padding-right: 40px;
+    line-height: .9;
 }
 
 @keyframes xscroll {

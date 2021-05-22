@@ -79,6 +79,11 @@
 .content {
     display: flex;
     justify-content: center;
+    padding: 48px 24px;
+    margin: 0 24px;
+    background-color: var(--ivory);
+    border: 2px solid var(--grey);
+    border-radius: 32px;
 }
 
 .main_nav {

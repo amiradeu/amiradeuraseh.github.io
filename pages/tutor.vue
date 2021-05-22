@@ -1,5 +1,6 @@
 <template>
   <div>
-        <h1>Tutor</h1>
+        <Heading v-bind:title="'tutor'" />
+        <Footer />
   </div>
 </template>

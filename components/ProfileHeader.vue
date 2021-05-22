@@ -5,7 +5,6 @@
         <ul>
             <li>🌷 𝕮𝖗𝖊𝖆𝖙𝖎𝖓𝖌 𝕯𝖎𝖌𝖎𝖙𝖆𝖑 𝕮𝖔𝖓𝖙𝖊𝖓𝖙</li>
             <li>ᵈᵉˢⁱᵍⁿ ᵃⁿᵈ ᵃʳᵗ</li>
-            
         </ul>
     </div>
 </template>
@@ -18,7 +17,9 @@
 
 <style lang="scss" scoped>
 div {
+    display: grid;
     justify-items: center;
+    text-align: center;
 }
 
 img {

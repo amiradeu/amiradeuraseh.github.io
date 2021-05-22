@@ -1,17 +1,15 @@
 <template>
-    <div>
-        <ul>
-            <li>Vue</li>
-            <li>Android Kotlin</li>
-            <li>Android Development</li>
-            <li>React</li>
-            <li>Javascript</li>
-            <li>HTML,CSS, SCSS</li>
-            <li>C++</li>
-            <li>Java</li>
-            <li>Python</li>
-        </ul>
-    </div>
+    <ul>
+        <li>Vue</li>
+        <li>Android Kotlin</li>
+        <li>Android Development</li>
+        <li>React</li>
+        <li>Javascript</li>
+        <li>HTML,CSS, SCSS</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+    </ul>
 </template>
 
 <script>
@@ -24,9 +22,11 @@
 ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 li {
+    background-color: var(--ivory);
     border: 2px solid var(--grey);
     color: var(--grey);
     padding: 12px 24px;

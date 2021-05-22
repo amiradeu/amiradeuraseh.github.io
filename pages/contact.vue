@@ -1,7 +1,7 @@
 <template>
   <div>
-        <ProfileHeader />
-        <Socials />
-        <Contact />
+        <Heading v-bind:title="'contact'" />
+        <Email />
+        <Footer />
   </div>
 </template>

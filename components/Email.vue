@@ -18,23 +18,25 @@
 a {
     text-decoration: none;
     text-transform: uppercase;
-    position: relative;
-    height: 200px;
+
+    .contact_graphics {
+        .text {
+            fill: var(--green);
+        }
+    }
 
     &:hover,
     &:focus {
         .contact_graphics {
             .text {
-                fill: var(--green);
+                fill: var(--candy);
             }
         }
     }
 }
 
 .contact_graphics {
-    position: absolute;
-    height: 200px;
-    width: auto;
+    width: 100%;
     transform: rotate3d(1, 1, -1, 45deg);
 
     // -webkit-transform: rotateX(21deg) rotateY(-19deg) rotateZ(70deg) skewX(-37deg) skewY(43deg);
