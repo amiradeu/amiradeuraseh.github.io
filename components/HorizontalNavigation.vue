@@ -5,7 +5,7 @@
         :class="{ open: selected === true}" >
         <div class="b-container" :class="{ open: selected === true}">
             <NuxtLink to="/" class="home"><logo class="brand_logo" /></NuxtLink>
-            <NavLinks class="horizontal_links" />
+            <!-- <NavLinks class="horizontal_links" /> -->
             <div class="cloud_container">
                 <div class="b-menu" @click="toggleNav">
                     <div class="b-bun b-bun--top"></div>
