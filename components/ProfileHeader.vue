@@ -1,11 +1,10 @@
 <template>
     <div class="profile_header">
-        <img src="~/assets/amiradeuraseh.JPG" alt="amiradeuraseh profile photo">
         <h1>Amira Deuraseh</h1>
-        <ul>
-            <li>🌷 𝕮𝖗𝖊𝖆𝖙𝖎𝖓𝖌 𝕯𝖎𝖌𝖎𝖙𝖆𝖑 𝕮𝖔𝖓𝖙𝖊𝖓𝖙</li>
-            <li>ᵈᵉˢⁱᵍⁿ ᵃⁿᵈ ᵃʳᵗ</li>
-        </ul>
+        <h2>Creative <span id="dev">Developer</span> based in Malaysia</h2>
+        <h4>Designer & Developer</h4>
+        <p>motion animation, ui/ux</p>
+        <p>available for hire</p>
     </div>
 </template>
 
@@ -26,5 +25,15 @@ img {
     border-radius:50%;
     height: 100px;
     width: 100px;
+}
+
+h1, h2, h4 {
+    text-transform: uppercase;
+
+    // #dev {
+    //     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    //     -webkit-text-stroke-width: 1px;
+    //     -webkit-text-stroke-color: black;
+    // }
 }
 </style>

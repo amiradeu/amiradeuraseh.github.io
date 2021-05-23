@@ -18,26 +18,22 @@
 a {
     text-decoration: none;
     text-transform: uppercase;
-
-    .contact_graphics {
-        .text {
-            fill: var(--green);
-        }
-    }
+    max-height: 400px;
+    max-width: 600px;
 
     &:hover,
     &:focus {
         .contact_graphics {
             .text {
-                fill: var(--candy);
+                fill: var(--green);
             }
         }
     }
 }
 
 .contact_graphics {
-    max-width: 80vw;
-    max-height: 50vh;
+    height: 100%;
+    width: 100%;
     transform: rotate3d(1, 1, -1, 45deg);
 
     // -webkit-transform: rotateX(21deg) rotateY(-19deg) rotateZ(70deg) skewX(-37deg) skewY(43deg);
@@ -47,6 +43,9 @@ a {
     // transform:  rotateX(21deg) rotateY(-19deg) rotateZ(70deg) skewX(-37deg) skewY(43deg);
 
     // transform: scale3d(1, 1, 1) rotateX(29deg) rotateY(-16deg) rotateZ(-216deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+    .text {
+        fill: var(--charcoal);
+    }
 }
 
 </style>

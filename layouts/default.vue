@@ -5,7 +5,7 @@
         <HorizontalNavigation
             class="navigation__sticky"
             @navOpen="updateNavState" />
-        <Background class="background" />
+        <!-- <Background class="background" /> -->
         <Nuxt class="nuxt" />
         <Scroll class="scroll__indicator" />
     </main>
@@ -60,6 +60,12 @@ html {
     background: var(--ivory);
     color: var(--charcoal);
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 *,

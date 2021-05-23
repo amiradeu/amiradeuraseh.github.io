@@ -1,6 +1,6 @@
 <template>
     <footer>
-        Design and code with <span id="love">♥︎</span> by 
+        <span class="highlight">Design</span> and <span class="highlight">Code</span> with <span id="love">♥︎</span> by 
         <a href="https://github.com/amiradeu/amiradeuraseh.github.io">
             Amira Deuraseh
         </a>
@@ -11,11 +11,10 @@
 footer {
     text-align: center;
     padding-bottom: 12px;
-    cursor: default;
 }
 
 #love {
-    color: var(--green);
+    color: var(--candy);
 }
 
 a {
@@ -24,5 +23,10 @@ a {
 
 a:hover, a:active {
     color: var(--candy);
+}
+
+.highlight {
+    text-transform: lowercase;
+    font-style: italic;
 }
 </style>

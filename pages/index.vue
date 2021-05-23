@@ -1,10 +1,8 @@
 <template>
   <div>
-        <Heading v-bind:title="'about'" />
+        <ProfileHeader />
         <Socials />
-        <Heading v-bind:title="'work'" />
-        <Skills />
-        <Heading v-bind:title="'contact'" />
+        <Skill />
         <Email />
         <Footer />
   </div>

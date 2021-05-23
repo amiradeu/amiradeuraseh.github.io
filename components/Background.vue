@@ -1,12 +1,8 @@
 <template>
     <div>
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
+        <InfiniteText :text="'amira deuraseh'" />
+        <InfiniteText :text="'amira deuraseh'" :rev="true" />
+        <InfiniteText :text="'amira deuraseh'" />
+        <InfiniteText :text="'amira deuraseh'" :rev="true" />
     </div>
 </template>
