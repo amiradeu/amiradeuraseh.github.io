@@ -1,6 +1,7 @@
 <template>
   <div>
-        <ProfileHeader />
+        <Profile />
+        <Service />
         <Socials />
         <Skill />
         <Email />
@@ -10,5 +11,10 @@
 <style lang="scss" scoped>
 div > * {
     margin: 24px 0;
+    min-height: 300px;
+}
+
+div > section {
+    // min-height: 300px;
 }
 </style>

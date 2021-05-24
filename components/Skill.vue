@@ -1,5 +1,5 @@
 <template>
-    <div class="section__skill">
+    <section class="section__skill">
         <div class="skill_background">
             <div v-for="item in 3" :key="item.id">
                 <InfiniteText :text="'software developer'" />
@@ -7,7 +7,7 @@
             </div>
         </div>
         <Skills class="skill_list" />
-    </div>
+    </section>
 </template>
 
 <script>

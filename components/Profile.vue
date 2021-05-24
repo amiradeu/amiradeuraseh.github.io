@@ -3,7 +3,6 @@
         <h1>Amira Deuraseh</h1>
         <h2>Creative <span id="dev">Developer</span> based in Malaysia</h2>
         <h4>Designer & Developer</h4>
-        <p>motion animation, ui/ux</p>
         <p>available for hire</p>
     </div>
 </template>
