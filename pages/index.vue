@@ -1,7 +1,7 @@
 <template>
   <div>
-        <Profile />
-        <Service />
+        <!-- <Profile />
+        <Service /> -->
         <Socials />
         <Skill />
         <Email />
@@ -9,9 +9,9 @@
   </div>
 </template>
 <style lang="scss" scoped>
-div > * {
+div > *:not(footer) {
     margin: 24px 0;
-    min-height: 300px;
+    // min-height: 300px;
 }
 
 div > section {

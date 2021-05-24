@@ -218,7 +218,12 @@
 // mobile
 @media screen and (max-width: 481px){
     .content {
-        display: block;
+        display: grid;
+        padding: 24px 12px;
+
+        .main_nav.socmed {
+            padding-bottom: 0px;
+        }
     }
 
     .cloud_container {
