@@ -10,11 +10,6 @@
 </template>
 <style lang="scss" scoped>
 div > *:not(footer) {
-    margin: 24px 0;
-    // min-height: 300px;
-}
-
-div > section {
-    // min-height: 300px;
+    margin: 0 0 24px 0;
 }
 </style>

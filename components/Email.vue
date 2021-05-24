@@ -1,7 +1,9 @@
 <template>
-    <a href="mailto:hello@amiradeuraseh.com">
-        <contact class="contact_graphics" />
-    </a>
+    <div class="section__contact">
+        <a href="mailto:hello@amiradeuraseh.com">
+            <contact class="contact_graphics" />
+        </a>
+    </div>
 </template>
 
 <script>
@@ -15,11 +17,15 @@
 </script>
 
 <style lang="scss" scoped>
+.section__contact {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
     text-transform: uppercase;
-    max-height: 400px;
-    max-width: 600px;
 
     &:hover,
     &:focus {
@@ -32,8 +38,9 @@ a {
 }
 
 .contact_graphics {
-    height: 100%;
-    width: 100%;
+    width: 80vmin;
+    height: fit-content;
+    height: 40vmin;
     transform: rotate3d(1, 1, -1, 45deg);
 
     // -webkit-transform: rotateX(21deg) rotateY(-19deg) rotateZ(70deg) skewX(-37deg) skewY(43deg);

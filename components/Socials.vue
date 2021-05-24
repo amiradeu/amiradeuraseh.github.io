@@ -1,51 +1,53 @@
 <template>
-    <div class="content">        
-        <nav aria-label="main_nav" class="main_nav socmed">
-            <div class="cloud_container">
-                <a href="https://amiradeuraseh.gumroad.com/">
-                    <gumroad_icon class="brand_icons"/>
-                </a>
-                <gumroad class="socials" />
-            </div>
-            <div class="cloud_container">
-                <a href="https://www.instagram.com/amiradeuraseh/">
-                    <fa :icon="['fab', 'instagram']" class="brand_icons"/>
-                </a>
-                <instagram class="socials" />
-            </div>
-            <div class="cloud_container">
-                <a href="https://www.youtube.com/c/AmiraDeuraseh">
-                    <fa :icon="['fab', 'youtube']" class="brand_icons"/>
-                </a>
-                <youtube class="socials" />
-            </div>
-            <div class="cloud_container">
-                <a href="https://twitter.com/amiradeuraseh">
-                    <fa :icon="['fab', 'twitter']" class="brand_icons"/>
-                </a>
-                <twitter class="socials" />
-            </div>
-        </nav>
-        <nav aria-label="main_nav" class="main_nav">
-            <div class="cloud_container">
-                <a href="https://github.com/amiradeu">
-                    <fa :icon="['fab', 'github']" class="brand_icons"/>
-                </a>
-                <github class="socials" />
-            </div>
-            <div class="cloud_container">
-                <a href="https://codepen.io/amiradeuraseh">
-                    <fa :icon="['fab', 'codepen']" class="brand_icons"/>
-                </a>
-                <codepen class="socials" />
-            </div>
-            <div class="cloud_container">
-                <a href="https://semenyih.universitytutor.com/tutors/1175952">
-                    <fa :icon="['fas', 'code']" class="brand_icons"/>
-                </a>
-                <tutor class="socials" />
-            </div>
-        </nav>
+    <div>
+        <div class="content">        
+            <nav aria-label="main_nav" class="main_nav socmed">
+                <div class="cloud_container">
+                    <a href="https://amiradeuraseh.gumroad.com/">
+                        <gumroad_icon class="brand_icons"/>
+                    </a>
+                    <gumroad class="socials" />
+                </div>
+                <div class="cloud_container">
+                    <a href="https://www.instagram.com/amiradeuraseh/">
+                        <fa :icon="['fab', 'instagram']" class="brand_icons"/>
+                    </a>
+                    <instagram class="socials" />
+                </div>
+                <div class="cloud_container">
+                    <a href="https://www.youtube.com/c/AmiraDeuraseh">
+                        <fa :icon="['fab', 'youtube']" class="brand_icons"/>
+                    </a>
+                    <youtube class="socials" />
+                </div>
+                <div class="cloud_container">
+                    <a href="https://twitter.com/amiradeuraseh">
+                        <fa :icon="['fab', 'twitter']" class="brand_icons"/>
+                    </a>
+                    <twitter class="socials" />
+                </div>
+            </nav>
+            <nav aria-label="main_nav" class="main_nav">
+                <div class="cloud_container">
+                    <a href="https://github.com/amiradeu">
+                        <fa :icon="['fab', 'github']" class="brand_icons"/>
+                    </a>
+                    <github class="socials" />
+                </div>
+                <div class="cloud_container">
+                    <a href="https://codepen.io/amiradeuraseh">
+                        <fa :icon="['fab', 'codepen']" class="brand_icons"/>
+                    </a>
+                    <codepen class="socials" />
+                </div>
+                <div class="cloud_container">
+                    <a href="https://semenyih.universitytutor.com/tutors/1175952">
+                        <fa :icon="['fas', 'code']" class="brand_icons"/>
+                    </a>
+                    <tutor class="socials" />
+                </div>
+            </nav>
+        </div>
     </div>
 </template>
 
