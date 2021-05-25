@@ -65,6 +65,7 @@ h1 {
 }
 
 .location {
+    font-size: 2vw;
     text-align: center;
 }
 
@@ -89,6 +90,22 @@ h1 {
             transform: rotate3d(1, 1, -1, 15deg);
             z-index: -1;
         }
+    }
+}
+
+// tablet, desktop
+@media screen and (min-width: 1280px){
+    h1 {
+        font-size: 12vw;
+    }
+
+    .first_name .radiant {
+        top: 24%;
+        left: 16%;
+    }
+    
+    .job_title {
+        font-size: 6vw;
     }
 }
 </style>

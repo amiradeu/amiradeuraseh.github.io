@@ -21,4 +21,10 @@ div > *:not(footer) {
 .main_section {
     padding-top: 12vh;
 }
+
+@media screen and (min-width: 1280px){
+    .main_section {
+        min-height: 100vh;
+    }
+}
 </style>
