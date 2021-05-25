@@ -8,15 +8,19 @@
             <p class="job_title"><em>Creative</em> Developer</p>
             <p class="location">Based in Malaysia</p>
             <div class="job_status"><span>available for hire</span></div>
+            <liner class="line" />
         </section>
     </div>
 </template>
 
 <script>
 import radiant from "~/assets/radiant_circle.svg?inline"
+import liner from "~/assets/line.svg?inline"
+
     export default {
         components: {
-            radiant
+            radiant,
+            liner
         }
     }
 </script>
@@ -24,6 +28,7 @@ import radiant from "~/assets/radiant_circle.svg?inline"
 <style lang="scss" scoped>
 .section__profile {
     width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -93,8 +98,21 @@ h1 {
     }
 }
 
+.line {
+    width: 70%;
+    height: 4vh;
+}
+
 // tablet, desktop
 @media screen and (min-width: 1280px){
+    .line {
+        position: absolute;
+        bottom: 5vh;
+        left: 0;
+        width: 70%;
+        height: 10vh;
+    }
+
     h1 {
         font-size: 12vw;
     }
