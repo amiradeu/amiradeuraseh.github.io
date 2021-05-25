@@ -39,6 +39,7 @@ export default {
 }
 
 .nuxt {
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
