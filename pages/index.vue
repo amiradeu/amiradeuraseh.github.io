@@ -20,6 +20,5 @@ div > *:not(footer) {
 
 .main_section {
     padding-top: 12vh;
-    margin-bottom: 64px;
 }
 </style>
