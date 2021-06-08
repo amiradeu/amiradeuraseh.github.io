@@ -1,11 +1,7 @@
 <template>
     <main
-        class="main__layout"
-        :class="{ navOpen: state === true}" >
-        <HorizontalNavigation
-            class="navigation__sticky"
-            @navOpen="updateNavState" />
-        <!-- <Background class="background" /> -->
+        class="main__layout">
+        <TopBar class="navigation__sticky"/>
         <Nuxt class="nuxt" />
         <Scroll class="scroll__indicator" />
     </main>
