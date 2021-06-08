@@ -1,5 +1,7 @@
 <template>
     <ul>
+        <li class="_dev">Android Kotlin</li>
+        <li class="_dev">Android Jetpack</li>
         <li class="_dev">NuxtJS</li>
         <li class="_dev">Vue</li>
         <li class="_dev">React</li>
@@ -8,13 +10,11 @@
         <li class="_dev">HTML5</li>
         <li class="_dev">CSS3 & SCSS</li>
         <li class="_design">Figma</li>
-        <li class="_design">Illustrator</li>
-        <li class="_dev secondary">Kotlin</li>
-        <li class="_dev secondary">Android Development</li>
+        <li class="_design">Illustrator</li>        
         <li class="_dev secondary">Java</li>
+        <li class="_dev secondary">Python</li>
         <li class="_dev secondary">C++</li>
         <li class="_dev secondary">C</li>
-        <li class="_dev secondary">Python</li>
     </ul>
 </template>
 
@@ -28,12 +28,16 @@
 ul {
     display: flex;
     height: 100%;
+    width: 100%;
+    padding: 4vw;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 
 li {
+    // font-family: 'Butler';
+    // font-weight: 900;
     background-color: var(--ivory);
     border: 2px solid var(--grey);
     color: var(--grey);
