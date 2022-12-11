@@ -9,7 +9,7 @@ export default function Experience()
 {
     return <>
 
-        <Perf position="top-left" />
+        {/* <Perf position="top-left" /> */}
 
         <OrbitControls makeDefault minDistance={ 1 } maxDistance={ 15 }  />
 
