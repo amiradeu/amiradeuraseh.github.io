@@ -11,9 +11,8 @@ export default function Experience()
 
         <Perf position="top-left" />
 
-        <OrbitControls makeDefault />
+        <OrbitControls makeDefault minDistance={ 1 } maxDistance={ 15 }  />
 
-        {/* 050505 */}
         <color args={ [ "#3e3e3e" ] } attach="background" />
         
         <EffectComposer>

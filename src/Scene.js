@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { useMatcapTexture, Center, Text3D } from '@react-three/drei'
+import { Html, useMatcapTexture, Center, Text3D } from '@react-three/drei'
 import * as THREE from 'three'
 
 const torusGeometry = new THREE.TorusGeometry(1, 0.6, 16, 32)
@@ -31,6 +31,7 @@ export default function Scene()
     })
     
     return <>
+
         <Center>
             <Text3D
                 font="./fonts/helvetiker_regular.typeface.json"
@@ -49,6 +50,26 @@ export default function Scene()
                 />
 
             </Text3D>
+            
+            <Text3D
+                position={ [ 1, 1, 0] }
+                font="./fonts/Caveat_Regular.json"
+                size={ 0.75 }
+                height={ 0.2 }
+                curveSegments={ 12 }
+                bevelEnabled
+                bevelThickness={ 0.02 }
+                bevelOffset={ 0 }
+                bevelSegments={ 5 }
+            >
+                Creative Developer
+                <meshBasicMaterial
+                    color={ [ 1 * 10, 1 * 10, 1 * 10 ] }
+                    toneMapped={ false }
+                />
+
+            </Text3D>
+            
         </Center>
 
         { [...Array(300)].map((value, index) =>
